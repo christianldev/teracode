@@ -389,6 +389,19 @@ Common Styles all over the sites
   }
 }
 
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-18px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
 #theme-toggle::before {
   @apply absolute top-[-3px] right-[-4px] h-[7px] w-3.5 rotate-90 bg-radial-[circle_at_0_100%,transparent_6px,var(--color-background-8)_7px] bg-size-[50%_100%] bg-no-repeat content-[''];
 }

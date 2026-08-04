@@ -104,7 +104,7 @@ const Feature = () => {
               </div>
               {/* feature img  */}
               <RevealAnimation delay={0.5}>
-                <figure className="order-last w-full flex-shrink-0 lg:order-none lg:mt-[66px] lg:mr-6 lg:h-[620px] lg:w-[538.95px] xl:mt-5 xl:mr-0">
+                <figure className="order-last w-full flex-shrink-0 lg:order-none lg:mt-[66px] lg:mr-6 lg:h-[700px] lg:w-[610px] xl:mt-5 xl:mr-0 animate-float drop-shadow-[0_30px_50px_rgba(0,0,0,0.18)]">
                   <Image
                     src={holdMobile}
                     alt="Investment platform interface showing key features"
