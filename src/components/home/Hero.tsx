@@ -5,7 +5,25 @@ import LinkButton from '../ui/button/LinkButton';
 
 const Hero = () => {
   return (
-    <section className="dark:bg-background-6 relative bg-white min-[1921px]:overflow-hidden">
+    <section className="dark:bg-background-6 relative overflow-hidden bg-white min-[1921px]:overflow-hidden">
+      {/* large blob — orange-to-magenta, white border + inset glow, slow drift */}
+      <span
+        aria-hidden
+        style={{ animation: 'blob-drift 28s ease-in-out infinite' }}
+        className="pointer-events-none absolute top-[8%] left-[42%] h-[280px] w-[280px] -translate-x-full rounded-full border-2 border-white/65 bg-gradient-to-b from-orange-400 to-fuchsia-600 shadow-[inset_14px_0px_28px_#fff] blur-[2px]"
+      />
+      {/* small blob — horizontal gradient, opposite phase */}
+      <span
+        aria-hidden
+        style={{ animation: 'blob-drift-2 20s ease-in-out infinite' }}
+        className="pointer-events-none absolute bottom-[18%] left-[44%] h-[140px] w-[140px] -translate-x-full rounded-full border-2 border-white/65 bg-gradient-to-r from-orange-400 to-fuchsia-600 shadow-[inset_10px_0px_20px_#fff] blur-[1px]"
+      />
+      {/* accent blob — third drift for depth */}
+      <span
+        aria-hidden
+        style={{ animation: 'blob-drift-3 22s ease-in-out infinite' }}
+        className="pointer-events-none absolute top-[30%] left-[55%] h-[100px] w-[100px] rounded-full border-2 border-white/50 bg-gradient-to-br from-pink-500 to-orange-300 shadow-[inset_8px_0px_16px_#fff] blur-[1px]"
+      />
       <RevealAnimation offset={0} delay={0.5}>
         <figure className="absolute top-[50%] z-[1] w-full min-[1440px]:top-[350px] min-[2559px]:!top-[0px] sm:top-[38%] md:top-[20%] lg:top-[20%] xl:top-[411px] 2xl:top-[194px]">
           <Image src={heroSectionBg} alt="-bg" className="h-full w-full object-contain" />

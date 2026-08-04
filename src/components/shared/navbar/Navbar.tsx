@@ -47,23 +47,29 @@ const Navbar = () => {
           {/* Glassmorphic pill container */}
           <div
             className={cn(
-              'relative mx-auto flex items-center justify-between rounded-full px-2.5 py-2.5 xl:py-0',
-              /* frosted glass base */
-              'bg-white/[0.07] backdrop-blur-2xl',
-              'dark:bg-white/[0.04]',
-              /* luminous border */
-              'border border-white/20 dark:border-white/[0.08]',
-              /* layered shadow for depth */
-              'shadow-[0_8px_32px_rgba(0,0,0,0.10),0_1px_0_rgba(255,255,255,0.18)_inset]',
-              'dark:shadow-[0_8px_32px_rgba(0,0,0,0.40),0_1px_0_rgba(255,255,255,0.06)_inset]',
-              /* tighten glass when scrolled */
-              isScrolled && 'bg-white/[0.12] backdrop-blur-3xl shadow-[0_12px_40px_rgba(0,0,0,0.15),0_1px_0_rgba(255,255,255,0.22)_inset] dark:bg-white/[0.07]',
+              'navbar-glow relative mx-auto flex items-center justify-between overflow-hidden rounded-full px-2.5 py-2.5 xl:py-0',
+              /* frosted glass — matches `card` from source: backdrop-blur + semi-transparent */
+              'bg-white/25 backdrop-blur-[38px]',
+              'dark:bg-white/[0.09] dark:backdrop-blur-[38px]',
+              /* matches `border: 1px solid #ffffff56` */
+              'border border-white/24 dark:border-white/[0.10]',
+              /* matches `box-shadow: inset 2px 1px 6px #ffffff45` */
+              'shadow-[inset_2px_1px_6px_rgba(255,255,255,0.27),0_8px_32px_rgba(0,0,0,0.08)]',
+              'dark:shadow-[inset_2px_1px_6px_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.45)]',
+              isScrolled && 'bg-white/25 backdrop-blur-[56px]',
             )}>
+
+            {/* shine streak — matches card::after `shine` keyframe */}
+            <span
+              aria-hidden
+              style={{ animation: 'glass-shine 10s ease infinite' }}
+              className="pointer-events-none absolute h-3 w-[150%] rotate-[50deg] bg-white blur-[30px]"
+            />
 
             {/* subtle top-edge highlight streak */}
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-x-6 top-0 h-px rounded-full bg-gradient-to-r from-transparent via-white/40 to-transparent dark:via-white/20"
+              className="pointer-events-none absolute inset-x-6 top-0 h-px rounded-full bg-gradient-to-r from-transparent via-white/60 to-transparent"
             />
 
             <div className="flex items-center justify-center">
@@ -129,10 +135,7 @@ const Navbar = () => {
             </nav>
 
             <div className="hidden items-center justify-center xl:flex">
-              {/* CTA with subtle glow ring */}
-              <Link
-                href="/signup"
-                className="btn btn-md btn-primary relative overflow-hidden shadow-[0_0_18px_rgba(var(--color-primary,99,102,241),0.35)] transition-shadow duration-300 hover:shadow-[0_0_28px_rgba(var(--color-primary,99,102,241),0.55)] hover:btn-white-dark dark:hover:btn-white">
+              <Link href="/signup" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white">
                 <span>Get started</span>
               </Link>
             </div>

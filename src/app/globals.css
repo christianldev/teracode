@@ -12,3 +12,46 @@
 @import '../styles/lenis.css';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+/* blob drift — matches the original `ani` keyframe (scale + translate) */
+@keyframes blob-drift {
+  0%   { transform: translateX(0%) scale(1); }
+  50%  { transform: translateX(-18%) scale(0.82); }
+  100% { transform: translateX(0%) scale(1); }
+}
+/* secondary blob with opposite phase */
+@keyframes blob-drift-2 {
+  0%   { transform: translateX(0%) scale(1); }
+  50%  { transform: translateX(14%) scale(1.15); }
+  100% { transform: translateX(0%) scale(1); }
+}
+/* third blob */
+@keyframes blob-drift-3 {
+  0%   { transform: translate(0%, 0%) scale(1); }
+  33%  { transform: translate(10%, -12%) scale(0.9); }
+  66%  { transform: translate(-8%, 10%) scale(1.1); }
+  100% { transform: translate(0%, 0%) scale(1); }
+}
+/* conic glow border on the navbar pill that blooms on hover */
+.navbar-glow::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  border-radius: 9999px;
+  z-index: -1;
+background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+  filter: blur(18px);
+  transition: filter 0.4s ease;
+}
+
+
+
+/* glass shine sweep — matches the original `shine` keyframe */
+@keyframes glass-shine {
+  0%        { top: 100%; left: -100%; }
+  50%, 100% { top: 0%;   left: 70%;  }
+}
