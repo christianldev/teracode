@@ -18,7 +18,7 @@ const BlogCardV4 = ({ blog, className }: BlogCardV4Props) => {
           className,
         )}>
         <figure className="relative lg:max-w-[629px] max-w-full w-full h-[260px] overflow-hidden rounded-[20px]">
-          <Image src={blog.thumbnail} alt="blog" fill className="object-cover" />
+          <Image src={blog.thumbnail} alt="blog" fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
         </figure>
         <div className="p-8">
           <div className="flex items-center gap-4">
