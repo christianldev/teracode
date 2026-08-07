@@ -14,26 +14,26 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Investment Management - NextSaaS',
+  title: 'Investment Management - TeraCode',
 };
 
 const page = () => {
   return (
-   
-      <main className="bg-background-2 dark:bg-background-5">
-        <Hero />
-        <Clients />
-        <Feature />
-        <FeatureV2 />
-        <FeatureV3 />
-        <Services />
-        <Investment />
-        <Testimonial />
-        <Blog />
-        <Contact />
-        <CTA />
-      </main>
-     
+
+    <main className="bg-background-2 dark:bg-background-5">
+      <Hero />
+      <Clients />
+      <Feature />
+      <FeatureV2 />
+      <FeatureV3 />
+      <Services />
+      <Investment />
+      <Testimonial />
+      <Blog />
+      <Contact />
+      <CTA />
+    </main>
+
   );
 };
 

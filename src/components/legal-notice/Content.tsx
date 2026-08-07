@@ -13,15 +13,15 @@ const Content = () => {
               <p>
                 The{' '}
                 <Link href="/" className="text-primary-500">
-                  https://www.nextsaas.ai
+                  https://www.TeraCode.ai
                 </Link>{' '}
                 website is published by: <br />
-                NextSaaS is registered in the Trade and Companies Register under number 000000000. <br />
+                TeraCode is registered in the Trade and Companies Register under number 000000000. <br />
                 Registered office: 45 Innovation Avenue, Level 3 – San Francisco, CA 94107, USA <br />
                 Intracommunity VAT number: US000000000 <br />
                 E-mail address:
-                <a href="mailto:contact@nextsaas.ai" className="text-primary-500">
-                  contact@nextsaas.ai
+                <a href="mailto:contact@TeraCode.ai" className="text-primary-500">
+                  contact@TeraCode.ai
                 </a>
               </p>
             </div>
@@ -38,7 +38,7 @@ const Content = () => {
               <p>
                 The{' '}
                 <Link href="/" className="text-primary-500">
-                  https://www.nextsaas.ai
+                  https://www.TeraCode.ai
                 </Link>
                 <br />
                 website is hosted by: Vercel, Inc. <br />
@@ -55,10 +55,10 @@ const Content = () => {
             <div className="py-8 space-y-3">
               <h2 className="text-heading-4 font-normal">Development:</h2>
               <p>
-                This website has been designed and developed by NextSaaS Design Studio. <br />
+                This website has been designed and developed by TeraCode Design Studio. <br />
                 Website:{' '}
                 <Link href="/" className="text-primary-500">
-                  https://www.nextsaas.design
+                  https://www.TeraCode.design
                 </Link>
               </p>
             </div>

@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Customer Details - Investment Management || NextSaaS',
+  title: 'Customer Details - Investment Management || TeraCode',
 };
 
 const CustomerDetails = async ({ params }: { params: Promise<{ slug: string }> }) => {

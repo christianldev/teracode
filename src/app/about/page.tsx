@@ -10,7 +10,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'About - Investment Management || NextSaaS',
+  title: 'About - Investment Management || TeraCode',
 };
 
 const page = () => {
@@ -26,7 +26,7 @@ const page = () => {
         buttonText="View all reviews"
         badgeColor="badge-cyan"
         title="Real people. Real results."
-        description="“Nextsaas delivered our entire platform ahead of schedule—flawless execution and real partnership.”"
+        description="“TeraCode delivered our entire platform ahead of schedule—flawless execution and real partnership.”"
       />
       <AboutCTA />
     </main>

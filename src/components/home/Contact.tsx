@@ -41,8 +41,8 @@ const Contact = () => {
                     <Image src={mailWhite} alt="Email icon" className="size-6 hidden dark:block" />
                   </span>
                   <p>
-                    <Link href="mailto:hello@nextsaas.com" aria-label="Email us at hello@nextsaas.com">
-                      hello@nextsaas.com
+                    <Link href="mailto:hello@TeraCode.com" aria-label="Email us at hello@TeraCode.com">
+                      hello@TeraCode.com
                     </Link>
                   </p>
                 </li>

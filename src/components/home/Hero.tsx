@@ -45,7 +45,7 @@ const Hero = () => {
                   </RevealAnimation>
                   <RevealAnimation delay={0.2}>
                     <p className="mx-auto max-w-[600px] text-center md:w-full xl:max-w-[804px]">
-                      At NextSaaS, we help you invest confidently—offering tools that align with your goals, minimize
+                      At TeraCode, we help you invest confidently—offering tools that align with your goals, minimize
                       risk, and maximize long-term growth. Whether saving for retirement or growing your portfolio,
                       we&apos;ve got you covered.
                     </p>

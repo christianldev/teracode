@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Download - Investment Management || NextSaaS',
+  title: 'Download - Investment Management || TeraCode',
 };
 
 const page = () => {

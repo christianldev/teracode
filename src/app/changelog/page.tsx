@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Changelog - Investment Management || NextSaaS',
+  title: 'Changelog - Investment Management || TeraCode',
 };
 
 const Changelog = () => {

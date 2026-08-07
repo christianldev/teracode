@@ -13,7 +13,7 @@ const AnalyticsTestimonial = () => {
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
             <p className="text-secondary/60">
-              “Nextsaas delivered our entire platform ahead of schedule—flawless execution and real partnership.”
+              “TeraCode delivered our entire platform ahead of schedule—flawless execution and real partnership.”
             </p>
           </RevealAnimation>
         </div>

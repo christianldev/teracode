@@ -50,13 +50,13 @@ const Navbar = () => {
               'navbar-glow relative mx-auto flex items-center justify-between overflow-hidden rounded-full px-2.5 py-2.5 xl:py-0',
               /* frosted glass — matches `card` from source: backdrop-blur + semi-transparent */
               'bg-white/25 backdrop-blur-[38px]',
-              'dark:bg-white/[0.09] dark:backdrop-blur-[38px]',
+              'dark:bg-white/10 dark:backdrop-filter dark:backdrop-blur-lg',
               /* matches `border: 1px solid #ffffff56` */
-              'border border-white/24 dark:border-white/[0.10]',
+              'border border-white/24 dark:border-transparent dark:backdrop-filter dark:backdrop-blur-lg',
               /* matches `box-shadow: inset 2px 1px 6px #ffffff45` */
               'shadow-[inset_2px_1px_6px_rgba(255,255,255,0.27),0_8px_32px_rgba(0,0,0,0.08)]',
-              'dark:shadow-[inset_2px_1px_6px_rgba(255,255,255,0.06),0_8px_32px_rgba(0,0,0,0.45)]',
-              isScrolled && 'bg-white/25 backdrop-blur-[56px]',
+              'dark:shadow-none',
+              isScrolled && 'bg-white/25 backdrop-blur-[36px]',
             )}>
 
             {/* shine streak — matches card::after `shine` keyframe */}
@@ -69,19 +69,19 @@ const Navbar = () => {
             {/* subtle top-edge highlight streak */}
             <span
               aria-hidden
-              className="pointer-events-none absolute inset-x-6 top-0 h-px rounded-full bg-gradient-to-r from-transparent via-white/60 to-transparent"
+              className="pointer-events-none absolute inset-x-6 top-0 h-px rounded-full bg-gradient-to-r from-transparent via-white/60 to-transparent dark:hidden"
             />
 
             <div className="flex items-center justify-center">
               <Link href="/" className="inline-flex items-center">
                 <span className="sr-only">Home</span>
-                <figure className="hidden lg:block lg:max-w-[110px]">
-                  <Image src={mainLogo} alt="NextSaaS" className="block h-auto w-full dark:hidden" priority />
-                  <Image src={mainLogoDark} alt="NextSaaS" className="hidden h-auto w-full dark:block" priority />
+                <figure className="hidden lg:block lg:max-w-[160px] p-2">
+                  <Image src={mainLogo} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
+                  <Image src={mainLogoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
                 </figure>
                 <figure className="block max-w-[44px] lg:hidden">
-                  <Image src={logoIcon} alt="NextSaaS" className="block h-auto w-full dark:hidden" priority />
-                  <Image src={logoDark} alt="NextSaaS" className="hidden h-auto w-full dark:block" priority />
+                  <Image src={logoIcon} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
+                  <Image src={logoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
                 </figure>
               </Link>
             </div>
@@ -99,7 +99,7 @@ const Navbar = () => {
                       className={cn(
                         'text-tagline-1 flex cursor-pointer items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
                         /* glass tint on hover */
-                        'border-transparent text-secondary/60 dark:text-accent/60',
+                        'border-transparent text-secondary/60 dark:text-accent/80',
                         'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
                         'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
                       )}>
