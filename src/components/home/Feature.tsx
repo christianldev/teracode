@@ -8,39 +8,39 @@ import LinkButton from '../ui/button/LinkButton';
 const featureList = [
   {
     id: '1',
-    title: 'Enforce passcode policies',
+    title: 'Visibilidad las 24 horas',
     icon: 'ns-shape-15',
-    description: 'Apply in minutes from any device—no paperwork, no hassle.',
+    description: 'Su escaparate digital siempre abierto para atraer nuevos clientes desde cualquier lugar del mundo.',
   },
   {
     id: '2',
-    title: 'Lock devices in kiosk mode',
+    title: 'Diseño 100% responsivo',
     icon: 'ns-shape-24',
-    description: 'Our specialists guide you every step of the way, tailored to your needs.',
+    description: 'Nuestros desarrollos se adaptan perfectamente a dispositivos móviles, tablets y computadoras.',
   },
   {
     id: '3',
-    title: 'Real-time sync across devices',
+    title: 'Posicionamiento SEO',
     icon: 'ns-shape-21',
-    description: 'Get access to fair rates with zero hidden fees or surprises.',
+    description: 'Optimizamos su web para que destaque en Google y aumente el tráfico orgánico de calidad.',
   },
   {
     id: '4',
-    title: 'App whitelisting & blacklisting',
+    title: 'Alta velocidad y seguridad',
     icon: 'ns-shape-7',
-    description: 'Know where you stand quickly—get pre-approved in hours, not days.',
+    description: 'Garantizamos tiempos de carga rápidos y cifrado SSL para proteger los datos de sus visitantes.',
   },
   {
     id: '5',
-    title: 'Configure wi-fi & network settings',
+    title: 'Diseño enfocado a ventas',
     icon: 'ns-shape-34',
-    description: 'Apply in minutes from any device—no paperwork, no hassle.',
+    description: 'Estructuramos su sitio con llamados a la acción efectivos para aumentar sus tasas de conversión.',
   },
   {
     id: '6',
-    title: 'Remote wipe & factory reset',
+    title: 'Soporte y evolución',
     icon: 'ns-shape-36',
-    description: 'We stay with you post-closing to ensure a smooth transition.',
+    description: 'Le acompañamos tras el lanzamiento para mantener su plataforma segura, actualizada y escalable.',
   },
 ];
 
@@ -61,13 +61,14 @@ const Feature = () => {
               <div className="max-w-[681px] space-y-3 text-center md:text-left">
                 <RevealAnimation delay={0.1}>
                   <h2>
-                    Smarter investing starts with
-                    <span className="text-primary-500"> innovative </span>tools.
+                    ¿Por qué tener un <span className="text-primary-500"> sitio web </span> te ayuda a tener más
+                    <span className="text-primary-500"> clientes? </span>
                   </h2>
                 </RevealAnimation>
                 <RevealAnimation delay={0.2}>
                   <p className="mx-auto max-w-[448px] md:mx-0">
-                    Discover a platform designed to simplify your financial journey while maximizing long-term growth.
+                    Hoy, si tu negocio no está en internet,
+                    <span className="text-primary-500"> tus clientes están buscando a tu competencia. </span>
                   </p>
                 </RevealAnimation>
               </div>
@@ -76,14 +77,14 @@ const Feature = () => {
                   <LinkButton
                     href="/features"
                     className="btn btn-secondary btn-md hover:btn-white dark:btn-transparent dark:hover:btn-accent mx-auto w-[85%] md:mx-0 md:w-auto"
-                    aria-label="Browse all platform features">
-                    Explore all features
+                    aria-label="Explorar todas las características">
+                    Ver nuestros servicios
                   </LinkButton>
                 </div>
               </RevealAnimation>
             </div>
             {/* feature list with img  */}
-            <div className="mx-auto flex max-w-[1056px] flex-col items-center gap-10 lg:flex-row lg:gap-0">
+            <div className="mx-auto flex max-w-[1056px] max-h-[600px] flex-col items-center gap-10 lg:flex-row lg:gap-0 relative bottom-10">
               {/* left side features  */}
               <div className="mt-4 flex w-full flex-col gap-8 px-2 sm:mt-0 sm:px-0 md:flex-row lg:flex-col">
                 {featureList.slice(0, 3).map((feature, index) => (
@@ -107,7 +108,7 @@ const Feature = () => {
                 <figure className="order-last w-full flex-shrink-0 lg:order-none lg:mt-[66px] lg:mr-6 lg:h-[700px] lg:w-[610px] xl:mt-5 xl:mr-0 animate-float drop-shadow-[0_30px_50px_rgba(0,0,0,0.18)]">
                   <Image
                     src={holdMobile}
-                    alt="Investment platform interface showing key features"
+                    alt="Diseño web responsivo adaptado a dispositivos móviles para aumentar clientes"
                     className="size-full object-cover"
                   />
                 </figure>

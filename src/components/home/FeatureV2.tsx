@@ -1,4 +1,4 @@
-import heroBottomImage from '@public/images/ns-img-171.png';
+import heroBottomImage from '@public/images/ns-img-171.webp';
 import gradient12 from '@public/images/ns-img-504.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -41,15 +41,15 @@ const FeatureV2 = () => {
                 </div>
               </RevealAnimation>
             </div>
-            {/* <div className="md:flex-1/2 lg:pe-16 2xl:pe-[150px]">
+            <div className="md:flex-1/2 lg:pe-16 2xl:pe-[150px]">
               <div className="relative h-full">
-                <RevealAnimation delay={0.4} direction="left" offset={100}>
+                <RevealAnimation delay={0.4} direction="left" offset={100} className="md:absolute md:right-0 md:bottom-0 md:w-full h-full max-md:flex max-md:items-center max-md:justify-center">
                   <figure className="mx-auto max-w-[250px] max-md:flex max-md:items-center max-md:justify-center sm:max-w-[400px] md:absolute md:right-0 md:bottom-0 md:mx-0 md:max-w-[325px] lg:max-w-[425px]">
-                    <Image src={heroBottomImage} alt="shape" className="w-fill h-fill" />
+                    <Image src={heroBottomImage} alt="shape" className="h-auto w-full object-bottom" />
                   </figure>
                 </RevealAnimation>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
