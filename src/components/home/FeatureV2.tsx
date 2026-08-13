@@ -1,4 +1,4 @@
-import heroBottomImage from '@public/images/ns-img-171.webp';
+import heroBottomImage from '@public/images/ns-img-171.png';
 import gradient12 from '@public/images/ns-img-504.png';
 import Image from 'next/image';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -21,13 +21,12 @@ const FeatureV2 = () => {
               <div className="mx-auto mb-6 max-w-[420px] text-center sm:mb-10 md:mx-0 md:mb-14 md:text-left lg:max-w-[520px]">
                 <RevealAnimation delay={0.1}>
                   <h2 className="mb-3">
-                    Your financial <span className="text-primary-500">best interests</span>
+                    ¿Por qué <span className="text-primary-500">elegirnos?</span>
                   </h2>
                 </RevealAnimation>
                 <RevealAnimation delay={0.2}>
                   <p className="text-secondary dark:text-accent">
-                    Our mission is simple: help you grow your wealth with intelligent, goal-driven investment
-                    strategies.
+                    Potenciamos negocios a través de software innovador, impulsando el crecimiento empresarial y la eficiencia operativa. Nos dedicamos a crear soluciones personalizadas que se adaptan a las necesidades únicas de cada cliente.
                   </p>
                 </RevealAnimation>
               </div>
@@ -36,15 +35,15 @@ const FeatureV2 = () => {
                   <LinkButton
                     href="/services"
                     className="text-tagline-2 btn btn-secondary dark:btn-transparent hover:btn-primary dark:hover:btn-primary btn-md mx-auto w-[90%] font-medium md:mx-0 md:w-auto">
-                    Learn More
+                    Conoce mas
                   </LinkButton>
                 </div>
               </RevealAnimation>
             </div>
-            <div className="md:flex-1/2 lg:pe-16 2xl:pe-[150px]">
+            <div className="md:flex-1/1 lg:pe-16 2xl:pe-[50px]">
               <div className="relative h-full">
                 <RevealAnimation delay={0.4} direction="left" offset={100} className="md:absolute md:right-0 md:bottom-0 md:w-full h-full max-md:flex max-md:items-center max-md:justify-center">
-                  <figure className="mx-auto max-w-[250px] max-md:flex max-md:items-center max-md:justify-center sm:max-w-[400px] md:absolute md:right-0 md:bottom-0 md:mx-0 md:max-w-[325px] lg:max-w-[425px]">
+                  <figure className="mx-auto max-w-[480px] max-md:flex max-md:items-center max-md:justify-center sm:max-w-[560px] md:absolute md:right-0 md:bottom-0 md:mx-0 md:max-w-[500px] lg:max-w-[620px]">
                     <Image src={heroBottomImage} alt="shape" className="h-auto w-full object-bottom" />
                   </figure>
                 </RevealAnimation>

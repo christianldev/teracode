@@ -20,6 +20,7 @@ import PeopleAndCultureMenu from './PeopleAndCultureMenu';
 import ResourcesMenu from './ResourcesMenu';
 
 const dropdownNavItems = [
+
   { label: 'Company', dataMenu: 'company-mega-menu', MenuComponent: CompanyMenu },
   { label: 'Collaborate', dataMenu: 'partnership-dropdown-menu', MenuComponent: PartnershipMenu },
   { label: 'Resources', dataMenu: 'resources-mega-menu', MenuComponent: ResourcesMenu },
@@ -92,6 +93,19 @@ const Navbar = () => {
 
               <nav className="hidden items-center xl:flex">
                 <ul className="flex items-center">
+
+                  <li className="relative cursor-pointer py-2.5">
+                    <Link
+                      href="/about"
+                      className={cn(
+                        'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
+                        'border-transparent text-secondary/60 dark:text-accent/60',
+                        'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+                        'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
+                      )}>
+                      <span>Nosotros</span>
+                    </Link>
+                  </li>
                   {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
                     <li
                       key={label}

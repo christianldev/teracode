@@ -84,7 +84,7 @@ const Feature = () => {
               </RevealAnimation>
             </div>
             {/* feature list with img  */}
-            <div className="mx-auto flex max-w-[1056px] max-h-[600px] flex-col items-center gap-10 lg:flex-row lg:gap-0 relative bottom-10">
+            <div className="mx-auto flex max-w-[1056px]  flex-col items-center gap-10 lg:flex-row lg:gap-0 relative bottom-10">
               {/* left side features  */}
               <div className="mt-4 flex w-full flex-col gap-8 px-2 sm:mt-0 sm:px-0 md:flex-row lg:flex-col">
                 {featureList.slice(0, 3).map((feature, index) => (
