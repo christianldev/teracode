@@ -1,80 +1,119 @@
-import heroSectionBg from '@public/images/ns-img-217.svg';
+'use client'
+
+import React, { useRef, useState } from 'react';
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
-import RevealAnimation from '../animation/RevealAnimation';
-import LinkButton from '../ui/button/LinkButton';
+
+import teracodeBanner1 from '@public/images/banner/teracode-banner-1.jpeg';
+import teracodeBanner2 from '@public/images/banner/teracode-banner-2.jpeg';
+import teracodeBanner3 from '@public/images/banner/teracode-banner-3.jpeg';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/navigation';
+import 'swiper/css/thumbs';
+
+// import required modules
+import { FreeMode, Navigation, Thumbs, EffectFade, Autoplay } from 'swiper/modules';
+
 
 const Hero = () => {
-  return (
-    <section className="dark:bg-background-6 relative overflow-hidden bg-white min-[1921px]:overflow-hidden">
-      {/* large blob — orange-to-magenta, white border + inset glow, slow drift */}
-      <span
-        aria-hidden
-        style={{ animation: 'blob-drift 18s ease-in-out infinite' }}
-        className="pointer-events-none absolute top-[8%] left-[42%] h-[280px] w-[280px] -translate-x-full rounded-full border-2 border-white/65 bg-gradient-to-b from-orange-400 to-fuchsia-600 shadow-[inset_14px_0px_28px_#fff] blur-[2px]"
-      />
-      {/* small blob — horizontal gradient, opposite phase */}
-      <span
-        aria-hidden
-        style={{ animation: 'blob-drift-2 20s ease-in-out infinite' }}
-        className="pointer-events-none absolute bottom-[18%] left-[44%] h-[140px] w-[140px] -translate-x-full rounded-full border-2 border-white/65 bg-gradient-to-r from-orange-400 to-fuchsia-600 shadow-[inset_10px_0px_20px_#fff] blur-[1px]"
-      />
-      {/* accent blob — third drift for depth */}
-      <span
-        aria-hidden
-        style={{ animation: 'blob-drift-3 22s ease-in-out infinite' }}
-        className="pointer-events-none absolute top-[30%] left-[75%] h-[100px] w-[100px] rounded-full border-2 border-white/50 bg-gradient-to-br from-pink-500 to-orange-300 shadow-[inset_8px_0px_16px_#fff] blur-[1px]"
-      />
-      <RevealAnimation offset={0} delay={0.5}>
-        <figure className="absolute top-[50%] z-[1] w-full min-[1440px]:top-[350px] min-[2559px]:!top-[0px] sm:top-[38%] md:top-[20%] lg:top-[20%] xl:top-[411px] 2xl:top-[194px]">
-          <Image src={heroSectionBg} alt="-bg" className="h-full w-full object-contain" priority />
-        </figure>
-      </RevealAnimation>
+  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
 
-      <div className="mx-auto max-w-[1365px]">
-        <div className="pt-20 pb-14 sm:pt-24 sm:pb-20 md:pt-24 lg:pt-28 xl:pt-[109px] xl:pb-[94px]">
-          <div className="h-auto  bg-center bg-no-repeat xl:h-[962px] ">
-            <div className="main-container">
-              <div className="relative z-[2] space-y-10 pt-[71px] md:space-y-14">
-                {/* heading  */}
-                <div className="space-y-4">
-                  <RevealAnimation delay={0.1}>
-                    <h1 className="mx-auto max-w-[800px] text-center xl:w-full xl:max-w-[1140px]">
-                      Desarrollo web, e-commerce y software a medida en
-                      <br className="hidden sm:inline" />
-                      <span className="text-primary-500"> Guayaquil, Ecuador.</span>
-                    </h1>
-                  </RevealAnimation>
-                  <RevealAnimation delay={0.2}>
-                    <p className="mx-auto max-w-[600px] text-center md:w-full xl:max-w-[804px] font-medium dark:text-amber-100">
-                      En TeraCode, nos especializamos en crear soluciones digitales personalizadas que impulsan el crecimiento de tu negocio. Sabemos cómo potenciar tu negocio, aprovechando la última tecnología. Contamos con un equipo sólido y capaz de transformar tus requerimientos en aplicaciones web a la medida para empresas y emprendimientos.
-                    </p>
-                  </RevealAnimation>
+  return (
+    <section className=" bg-cover bg-no-repeat bg-[url('/images/other/bg-lines-2.png')] dark:bg-[url('/images/other/bg-lines-2-dark.png')] active">
+
+      <div className="grid xl:grid-cols-5 grid-cols-1 items-stretch">
+        <div className="xl:col-span-3 h-full relative min-w-0 overflow-hidden">
+
+          <Swiper
+            style={{
+              '--swiper-navigation-color': '#fff',
+              '--swiper-pagination-color': '#fff',
+            } as React.CSSProperties}
+            spaceBetween={0}
+            effect={'fade'}
+            navigation={{
+              nextEl: '.cre-button-next',
+              prevEl: '.cre-button-prev',
+            }}
+            thumbs={{ swiper: thumbsSwiper }}
+            modules={[FreeMode, Navigation, Thumbs, EffectFade, Autoplay]}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            className="mySwiper swiper-hero swiper-fade h-full w-full"
+          >
+            <SwiperSlide>
+              <div className="relative h-full w-full flex items-center justify-center">
+                <Image src={teracodeBanner1} alt="banner" className="w-full h-auto object-contain object-left xl:object-center" />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative h-full w-full flex items-center justify-center">
+                <Image src={teracodeBanner2} alt="banner" className="w-full h-auto object-contain object-left xl:object-center" />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="relative h-full w-full flex items-center justify-center">
+                <Image src={teracodeBanner3} alt="banner" className="w-full h-auto object-contain object-left xl:object-center" />
+                <div className="absolute inset-0 bg-black/10"></div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+
+        <div className="xl:col-span-2 relative h-full flex flex-col justify-between bg-[#f8f9fa] overflow-hidden">
+          {/* Background grid */}
+          <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '70px 70px' }}></div>
+
+          <div className="flex-1 flex flex-col justify-center relative z-10 px-8 py-12 xl:p-16">
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={20}
+              slidesPerView={1}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="mySwiper2 swiper-hero w-full"
+            >
+              <SwiperSlide>
+                <div className="flex-col flex items-start justify-center w-full">
+                  <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Innovative Design Solutions:<br />Unleashing Creativity for You</h2>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
                 </div>
-                {/* cta btn  */}
-                <ul className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row">
-                  <RevealAnimation delay={0.3} direction="left" offset={50}>
-                    <li className="w-full sm:w-auto">
-                      <LinkButton
-                        href="/pricing"
-                        rel="noopener noreferrer"
-                        className="btn btn-secondary dark:btn-accent hover:btn-white dark:hover:btn-white-dark btn-md md:btn-xl mx-auto w-[90%] md:mx-0 md:w-auto"
-                        aria-label="Begin your investment journey">
-                        Cotizar proyecto
-                      </LinkButton>
-                    </li>
-                  </RevealAnimation>
-                  <RevealAnimation delay={0.5} direction="left" offset={50}>
-                    <li className="w-full sm:w-auto">
-                      <LinkButton
-                        href="/tutorial"
-                        rel="noopener noreferrer"
-                        className="btn hover:btn-secondary dark:hover:btn-accent btn-white dark:btn-transparent btn-md md:btn-xl mx-auto w-[90%] md:mx-0 md:w-auto"
-                        aria-label="Learn more about our investment platform">
-                        Nuestros proyectos
-                      </LinkButton>
-                    </li>
-                  </RevealAnimation>
-                </ul>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex-col flex items-start justify-center w-full">
+                  <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Design Excellence Redefined:<br />Elevate Your Brand with Our Agency</h2>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="flex-col flex items-start justify-center w-full">
+                  <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Crafting Vision into Reality:<br />Design Agency at Your Service</h2>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
+          <div className="relative z-10 w-full px-8 xl:px-16 pb-12">
+            <div className="flex items-center justify-end gap-5">
+              <div className="cre-button-prev cursor-pointer group" tabIndex={0} role="button" aria-label="Previous slide">
+                <div className="h-[60px] w-[60px] rounded-full border border-gray-200 bg-white group-hover:bg-primary flex items-center justify-center transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left h-5 w-5 stroke-gray-900 group-hover:stroke-white transition-colors"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
+                </div>
+              </div>
+              <div className="cre-button-next cursor-pointer group" tabIndex={0} role="button" aria-label="Next slide">
+                <div className="h-[60px] w-[60px] rounded-full border border-gray-200 bg-white group-hover:bg-primary flex items-center justify-center transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5 stroke-gray-900 group-hover:stroke-white transition-colors"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+                </div>
               </div>
             </div>
           </div>

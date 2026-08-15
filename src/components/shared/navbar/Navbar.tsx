@@ -99,7 +99,7 @@ const Navbar = () => {
                       href="/about"
                       className={cn(
                         'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'border-transparent text-secondary/60 dark:text-accent/60',
+                        'border-transparent text-secondary dark:text-accent/20',
                         'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
                         'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
                       )}>

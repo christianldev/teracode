@@ -74,7 +74,7 @@ The application will be available at `http://localhost:3000`
 ## 📁 Project Structure
 
 ```
-ns-investment-management-next/
+ns-TeraCode-next/
 ├── public/                     # Static assets
 │   ├── images/                 # Images (332 files: 151 PNG, 150 SVG, 31 JPG)
 │   │   ├── badge/              # Badge images
