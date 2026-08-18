@@ -1,13 +1,13 @@
-import clientLogo10Dark from '@public/images/icons/client-logo-10-dark.svg';
-import clientLogo10 from '@public/images/icons/client-logo-10.svg';
-import clientLogo6Dark from '@public/images/icons/client-logo-6-dark.svg';
-import clientLogo6 from '@public/images/icons/client-logo-6.svg';
-import clientLogo7Dark from '@public/images/icons/client-logo-7-dark.svg';
-import clientLogo7 from '@public/images/icons/client-logo-7.svg';
-import clientLogo8Dark from '@public/images/icons/client-logo-8-dark.svg';
-import clientLogo8 from '@public/images/icons/client-logo-8.svg';
-import clientLogo9Dark from '@public/images/icons/client-logo-9-dark.svg';
-import clientLogo9 from '@public/images/icons/client-logo-9.svg';
+
+import NextjsLogo from '@public/images/icons/nextjs-icon.svg';
+import JavaScriptLogo from '@public/images/icons/javascript.svg';
+import NodeLogo from '@public/images/icons/nodejs-icon.svg';
+import LaravelLogo from '@public/images/icons/laravel.svg';
+import ReactLogo from '@public/images/icons/react.svg';
+import PythonLogo from '@public/images/icons/python.svg';
+import HTMLLogo from '@public/images/icons/html-5.svg';
+import TailwindLogo from '@public/images/icons/tailwindcss-icon.svg';
+
 import Image from 'next/image';
 import Marquee from 'react-fast-marquee';
 import RevealAnimation from '../animation/RevealAnimation';
@@ -15,30 +15,46 @@ import RevealAnimation from '../animation/RevealAnimation';
 export const clientLogos = [
   {
     id: 1,
-    image: clientLogo6,
-    imageDark: clientLogo6Dark,
+    image: NextjsLogo,
+
   },
   {
     id: 2,
-    image: clientLogo7,
-    imageDark: clientLogo7Dark,
+    image: JavaScriptLogo,
+
   },
   {
     id: 3,
-    image: clientLogo8,
-    imageDark: clientLogo8Dark,
+    image: NodeLogo,
+
   },
   {
     id: 4,
-    image: clientLogo9,
-    imageDark: clientLogo9Dark,
+    image: LaravelLogo,
+
   },
 
   {
     id: 5,
-    image: clientLogo10,
-    imageDark: clientLogo10Dark,
+    image: ReactLogo,
+
   },
+  {
+    id: 6,
+    image: PythonLogo,
+
+  },
+  {
+    id: 7,
+    image: HTMLLogo,
+
+  },
+  {
+    id: 8,
+    image: TailwindLogo,
+
+  },
+
 ];
 
 const Clients = () => {
@@ -48,8 +64,8 @@ const Clients = () => {
         <div className="space-y-8 md:space-y-14">
           <RevealAnimation delay={0.1}>
             <h2 className="text-center xl:text-heading-3">
-              Trusted by
-              <span className="text-primary-500"> 100K+ Global Investors </span>
+              Nuestras tecnologías
+
             </h2>
           </RevealAnimation>
           <RevealAnimation delay={0.2}>
@@ -60,28 +76,14 @@ const Clients = () => {
                 <Marquee pauseOnHover={true} autoFill={true}>
                   <div className="flex items-center justify-center gap-8">
                     {clientLogos.map((logo) => (
-                      <figure key={logo.id} className="min-w-[140px] md:min-w-[201px] ml-8">
-                        <Image src={logo.image} alt="Client company logo" className="dark:hidden" />
-                        <Image src={logo.imageDark} alt="Client company logo" className="hidden dark:block" />
+                      <figure key={logo.id} className="w-10 h-10 sm:w-14 sm:h-14 md:w-18 md:h-18 lg:w-22 lg:h-22 ml-8 flex items-center justify-center">
+                        <Image src={logo.image} alt="Client company logo" className="max-w-full max-h-full object-contain" />
                       </figure>
                     ))}
                   </div>
                 </Marquee>
               </article>
-              <article className="relative max-w-[900px] mx-auto">
-                <div className="absolute left-0 top-0 h-full w-[3%] bg-gradient-to-r from-background-2 to-transparent dark:!from-background-5 z-40" />
-                <div className="absolute right-0 top-0 h-full w-[3%] bg-gradient-to-l from-background-2 to-transparent dark:!from-background-5 z-40" />
-                <Marquee pauseOnHover={true} autoFill={true} direction="right">
-                  <div className="flex items-center justify-center gap-8">
-                    {clientLogos.map((logo) => (
-                      <figure key={logo.id} className="min-w-[140px] md:min-w-[201px] ml-8">
-                        <Image src={logo.image} alt="Client company logo" className="dark:hidden" />
-                        <Image src={logo.imageDark} alt="Client company logo" className="hidden dark:block" />
-                      </figure>
-                    ))}
-                  </div>
-                </Marquee>
-              </article>
+
             </div>
           </RevealAnimation>
         </div>

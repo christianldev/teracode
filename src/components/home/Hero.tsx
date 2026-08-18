@@ -68,7 +68,7 @@ const Hero = () => {
           </Swiper>
         </div>
 
-        <div className="xl:col-span-2 relative h-full flex flex-col justify-between bg-[#f8f9fa] overflow-hidden">
+        <div className="xl:col-span-2 relative h-full flex flex-col justify-between bg-[#f8f9fa] dark:bg-background-7 overflow-hidden">
           {/* Background grid */}
           <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'linear-gradient(#000 1px, transparent 1px), linear-gradient(90deg, #000 1px, transparent 1px)', backgroundSize: '70px 70px' }}></div>
 
@@ -85,19 +85,19 @@ const Hero = () => {
               <SwiperSlide>
                 <div className="flex-col flex items-start justify-center w-full">
                   <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Innovative Design Solutions:<br />Unleashing Creativity for You</h2>
-                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed dark:text-gray-500">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="flex-col flex items-start justify-center w-full">
                   <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Design Excellence Redefined:<br />Elevate Your Brand with Our Agency</h2>
-                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed dark:text-gray-500">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
                 </div>
               </SwiperSlide>
               <SwiperSlide>
                 <div className="flex-col flex items-start justify-center w-full">
                   <h2 className="text-[36px] xl:text-[44px] font-bold text-default-950 mt-2 leading-[1.1] text-left">Crafting Vision into Reality:<br />Design Agency at Your Service</h2>
-                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
+                  <p className="w-full text-base text-default-800 font-medium mt-6 max-w-lg text-left leading-relaxed dark:text-gray-500">Their ability to understand our vision and translate it into a comprehensive marketing strategy is truly exceptional.</p>
                 </div>
               </SwiperSlide>
             </Swiper>
