@@ -15,6 +15,7 @@ import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
 
 const navItems = [
+  { label: 'Inicio', href: '/' },
   { label: 'Servicios', href: '/services' },
   { label: 'Portafolio', href: '/case-study' },
   { label: 'Proceso', href: '/process' },

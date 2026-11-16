@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import type SwiperType from 'swiper';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
@@ -14,13 +15,29 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
+import 'swiper/css/effect-fade';
 
 // import required modules
-import { FreeMode, Navigation, Thumbs, EffectFade, Autoplay } from 'swiper/modules';
+import { FreeMode, Thumbs, EffectFade } from 'swiper/modules';
 
 
 const Hero = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState<any>(null);
+  const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
+  const [heroSwiper, setHeroSwiper] = useState<SwiperType | null>(null);
+
+  useEffect(() => {
+    if (!heroSwiper) {
+      return;
+    }
+
+    const autoplayTimer = window.setInterval(() => {
+      if (!heroSwiper.destroyed) {
+        heroSwiper.slideNext();
+      }
+    }, 5000);
+
+    return () => window.clearInterval(autoplayTimer);
+  }, [heroSwiper]);
 
   return (
     <section className=" bg-cover bg-no-repeat bg-[url('/images/other/bg-lines-2.png')] dark:bg-[url('/images/other/bg-lines-2-dark.png')] active">
@@ -34,17 +51,11 @@ const Hero = () => {
               '--swiper-pagination-color': '#fff',
             } as React.CSSProperties}
             spaceBetween={0}
+            loop={true}
             effect={'fade'}
-            navigation={{
-              nextEl: '.cre-button-next',
-              prevEl: '.cre-button-prev',
-            }}
+            onSwiper={setHeroSwiper}
             thumbs={{ swiper: thumbsSwiper }}
-            modules={[FreeMode, Navigation, Thumbs, EffectFade, Autoplay]}
-            autoplay={{
-              delay: 5000,
-              disableOnInteraction: false,
-            }}
+            modules={[FreeMode, Thumbs, EffectFade]}
             className="mySwiper swiper-hero swiper-fade h-full w-full"
           >
             <SwiperSlide>
@@ -79,7 +90,7 @@ const Hero = () => {
               slidesPerView={1}
               freeMode={true}
               watchSlidesProgress={true}
-              modules={[FreeMode, Navigation, Thumbs]}
+              modules={[FreeMode, Thumbs]}
               className="mySwiper2 swiper-hero w-full"
             >
               <SwiperSlide>
@@ -105,16 +116,16 @@ const Hero = () => {
 
           <div className="relative z-10 w-full px-8 xl:px-16 pb-12">
             <div className="flex items-center justify-end gap-5">
-              <div className="cre-button-prev cursor-pointer group" tabIndex={0} role="button" aria-label="Previous slide">
+              <button type="button" onClick={() => heroSwiper?.slidePrev()} className="cre-button-prev cursor-pointer group" aria-label="Previous slide">
                 <div className="h-[60px] w-[60px] rounded-full border border-gray-200 bg-white group-hover:bg-primary flex items-center justify-center transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-left h-5 w-5 stroke-gray-900 group-hover:stroke-white transition-colors"><path d="m12 19-7-7 7-7"></path><path d="M19 12H5"></path></svg>
                 </div>
-              </div>
-              <div className="cre-button-next cursor-pointer group" tabIndex={0} role="button" aria-label="Next slide">
+              </button>
+              <button type="button" onClick={() => heroSwiper?.slideNext()} className="cre-button-next cursor-pointer group" aria-label="Next slide">
                 <div className="h-[60px] w-[60px] rounded-full border border-gray-200 bg-white group-hover:bg-primary flex items-center justify-center transition-colors">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-right h-5 w-5 stroke-gray-900 group-hover:stroke-white transition-colors"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </div>
-              </div>
+              </button>
             </div>
           </div>
         </div>

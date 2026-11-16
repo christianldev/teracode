@@ -47,7 +47,6 @@ const pricingData: PricingCard[] = [
       { id: 'unlimited-bandwidth', text: 'Unlimited Bandwidth', isActive: true },
       { id: 'promotional-tools', text: 'Promotional Tools', isActive: true },
       { id: 'single-payment', text: 'Single Payment', isActive: true },
-      { id: 'single-payment', text: 'Single Payment', isActive: true },
       { id: 'selling-your-own-items', text: 'Selling your own items', isActive: false },
       { id: 'powerful-integration', text: 'Powerful integration', isActive: false },
     ],
