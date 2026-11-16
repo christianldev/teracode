@@ -18,7 +18,8 @@ export interface MobileMenuItem {
 export interface MobileMenuGroup {
   id: string;
   title: string;
-  submenu: MobileMenuItem[];
+  href?: string;
+  submenu?: MobileMenuItem[];
 }
 
 const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
@@ -49,20 +50,29 @@ const MobileMenu = ({ menuData }: { menuData: MobileMenuGroup[] }) => {
           </p>
           <ul className="space-y-2">
             {menuData.map((item) => (
-              <MobileMenuItem key={item.id} id={item.id} title={item.title} hasSubmenu={item.submenu.length > 0}>
-                {/* submenu items list  */}
-                <ul>
-                  {item?.submenu?.map((subItem) => (
-                    <li key={subItem.id}>
-                      <Link
-                        href={subItem.href}
-                        className="text-tagline-1 text-secondary dark:text-accent ml-4 block py-2.5 text-left font-normal transition-all duration-200">
-                        {subItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </MobileMenuItem>
+              <li key={item.id}>
+                {item.href ? (
+                  <Link
+                    href={item.href}
+                    className="text-tagline-1 text-secondary dark:text-accent block p-2.5 font-normal transition-colors duration-200 hover:text-primary-500">
+                    {item.title}
+                  </Link>
+                ) : (
+                  <MobileMenuItem id={item.id} title={item.title} hasSubmenu={Boolean(item.submenu?.length)}>
+                    <ul>
+                      {item.submenu?.map((subItem) => (
+                        <li key={subItem.id}>
+                          <Link
+                            href={subItem.href}
+                            className="text-tagline-1 text-secondary dark:text-accent ml-4 block py-2.5 text-left font-normal transition-all duration-200">
+                            {subItem.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </MobileMenuItem>
+                )}
+              </li>
             ))}
           </ul>
         </div>

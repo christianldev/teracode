@@ -11,33 +11,23 @@ import mainLogo from '@public/images/shared/main-logo.svg';
 import mainLogoDark from '@public/images/shared/main-logo-dark.svg';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import MobileMenu from '../mobile-menu/MobileMenu';
 import MobileMenuButton from '../mobile-menu/MobileMenuButton';
-import CompanyMenu from './CompanyMenu';
-import PartnershipMenu from './PartnershipMenu';
-import PeopleAndCultureMenu from './PeopleAndCultureMenu';
-import ResourcesMenu from './ResourcesMenu';
 
-const dropdownNavItems = [
-  { label: 'Collaborate', dataMenu: 'partnership-dropdown-menu', MenuComponent: PartnershipMenu },
-  { label: 'Resources', dataMenu: 'resources-mega-menu', MenuComponent: ResourcesMenu },
-  { label: 'People & Culture', dataMenu: 'people-dropdown-menu', MenuComponent: PeopleAndCultureMenu },
+const navItems = [
+  { label: 'Servicios', href: '/services' },
+  { label: 'Portafolio', href: '/case-study' },
+  { label: 'Proceso', href: '/process' },
+  { label: 'Preguntas', href: '/faq' },
+  { label: 'Contacto', href: '/contact-us' },
 ];
 
 const Navbar = () => {
-  const [menuDropdownId, setMenuDropdownId] = useState<string | null>(null);
-
   const { isScrolled } = useNavbarScroll(150);
-
-  const handleMenuHover = (dropdownId?: string | null) => {
-    setMenuDropdownId(dropdownId || null);
-  };
 
   return (
     <MobileMenuProvider>
       <header
-        onMouseLeave={() => handleMenuHover(null)}
         className={cn(
           'lp:!max-w-[1290px] fixed top-5 left-1/2 z-[100] mx-auto w-full max-w-[350px] -translate-x-1/2 px-3 transition-all duration-500 min-[425px]:max-w-[375px] min-[500px]:max-w-[450px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[960px] xl:max-w-[1140px]',
           isScrolled && 'top-2',
@@ -89,81 +79,27 @@ const Navbar = () => {
               </div>
 
               <nav className="hidden items-center xl:flex">
-                <ul className="flex items-center">
-                  <li className="relative cursor-pointer py-2.5">
-                    <Link
-                      href="/about"
-                      className={cn(
-                        'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'text-secondary dark:text-accent/40 border-transparent',
-                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
-                      )}>
-                      <span>Nosotros</span>
-                    </Link>
-                  </li>
-
-                  <li className="relative cursor-pointer py-2.5">
-                    <Link
-                      href="/services"
-                      className={cn(
-                        'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'text-secondary dark:text-accent/40 border-transparent',
-                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
-                      )}>
-                      <span>Servicios</span>
-                    </Link>
-                  </li>
-                  {dropdownNavItems.map(({ label, dataMenu, MenuComponent }) => (
-                    <li
-                      key={label}
-                      className="group/item relative cursor-pointer py-2.5"
-                      data-menu={dataMenu}
-                      onMouseEnter={() => handleMenuHover(dataMenu)}>
-                      <button
-                        type="button"
+                <ul className="flex items-center gap-1">
+                  {navItems.map(({ label, href }) => (
+                    <li key={label} className="relative py-2.5">
+                      <Link
+                        href={href}
                         className={cn(
-                          'text-tagline-1 flex cursor-pointer items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                          /* glass tint on hover */
-                          'text-secondary/60 dark:text-accent/80 border-transparent',
+                          'text-tagline-1 flex items-center rounded-full border px-4 py-2 font-normal transition-all duration-200',
+                          'text-secondary dark:text-accent/80 border-transparent',
                           'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
                           'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
                         )}>
                         <span>{label}</span>
-                        <span className="block origin-center translate-y-px transition-all duration-300 group-hover/item:rotate-180">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-4">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
-                          </svg>
-                        </span>
-                      </button>
-                      <MenuComponent menuDropdownId={menuDropdownId} setMenuDropdownId={setMenuDropdownId} />
+                      </Link>
                     </li>
                   ))}
-                  <li className="relative cursor-pointer py-2.5">
-                    <Link
-                      href="/pricing"
-                      className={cn(
-                        'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'text-secondary/60 dark:text-accent/40 border-transparent',
-                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
-                      )}>
-                      <span>Pricing</span>
-                    </Link>
-                  </li>
                 </ul>
               </nav>
 
               <div className="hidden items-center justify-center xl:flex">
-                <Link href="/signup" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white">
-                  <span>Get started</span>
+                <Link href="/contact-us" className="btn btn-md btn-primary hover:btn-white-dark dark:hover:btn-white">
+                  <span>Cotizar proyecto</span>
                 </Link>
               </div>
 
