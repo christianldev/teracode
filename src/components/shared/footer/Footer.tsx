@@ -37,10 +37,10 @@ const Footer = ({ className }: { className?: string }) => {
                   <Image src={phoneWhite} alt="" className="size-5" /> WhatsApp
                 </Link>
                 <Link
-                  href="mailto:hola@teracode.tech"
+                  href="mailto:teracode.techec@gmail.com"
                   className="hover:text-primary-400 flex items-center gap-2"
                   aria-label="Correo de TeraCode">
-                  <Image src={mailWhite} alt="" className="size-5" /> hola@teracode.tech
+                  <Image src={mailWhite} alt="" className="size-5" /> teracode.techec@gmail.com
                 </Link>
               </div>
             </div>

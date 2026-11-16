@@ -37,8 +37,8 @@ const Contact = () => {
               <ContactItem
                 icon={mail}
                 iconDark={mailWhite}
-                content="hola@teracode.tech"
-                href="mailto:hola@teracode.tech"
+                content="teracode.techec@gmail.com"
+                href="mailto:teracode.techec@gmail.com"
                 delay={0.4}
               />
               <ContactItem
