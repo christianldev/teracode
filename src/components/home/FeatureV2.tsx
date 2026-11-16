@@ -43,7 +43,7 @@ const FeatureV2 = () => {
             <div className="md:flex-1/1 lg:pe-16 2xl:pe-[50px]">
               <div className="relative h-full">
                 <RevealAnimation delay={0.4} direction="left" offset={100} className="md:absolute md:right-0 md:bottom-0 md:w-full h-full max-md:flex max-md:items-center max-md:justify-center">
-                  <figure className="mx-auto max-w-[480px] max-md:flex max-md:items-center max-md:justify-center sm:max-w-[560px] md:absolute md:right-0 md:bottom-0 md:mx-0 md:max-w-[500px] lg:max-w-[620px]">
+                  <figure className="mx-auto max-w-[480px] max-md:flex max-md:items-center max-md:justify-center sm:max-w-[560px] md:absolute md:right-6 md:bottom-0 md:mx-0 md:max-w-[500px] lg:bottom-0 lg:max-w-[620px]">
                     <Image src={heroBottomImage} alt="shape" className="h-auto w-full object-bottom" />
                   </figure>
                 </RevealAnimation>

@@ -12,17 +12,17 @@ const data = [
   },
   {
     id: 2,
-    tabTitle: 'Changelog',
+    tabTitle: 'Proceso',
     tabContent: <ChangelogTab />,
   },
   {
     id: 3,
-    tabTitle: 'Privacy',
+    tabTitle: 'Privacidad',
     tabContent: <PrivacyTab />,
   },
   {
     id: 4,
-    tabTitle: 'Terms & Conditions',
+    tabTitle: 'Términos y condiciones',
     tabContent: <TermsConditionsTab />,
   },
 ];

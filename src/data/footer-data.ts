@@ -2,31 +2,29 @@ import { FooterData } from '@/interface';
 
 export const footerLinks: FooterData[] = [
   {
-    title: 'Company',
+    title: 'Empresa',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Career', href: '/career' },
-      { label: 'Case Studies', href: '/case-study' },
-      { label: 'Contact Us', href: '/contact-us' },
+      { label: 'Nosotros', href: '/about' },
+      { label: 'Servicios', href: '/services' },
+      { label: 'Portafolio', href: '/case-study' },
+      { label: 'Contacto', href: '/contact-us' },
     ],
   },
   {
-    title: 'Support',
+    title: 'Soluciones',
     links: [
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Documentation', href: '/documentation' },
-      { label: 'Tutorial', href: '/tutorial' },
-      { label: 'Community', href: '/community' },
+      { label: 'Landing Pages', href: '/services' },
+      { label: 'Tiendas Online', href: '/services' },
+      { label: 'Catálogos WhatsApp', href: '/services' },
+      { label: 'Sistemas a Medida', href: '/services' },
     ],
   },
   {
-    title: 'Legal Policies',
+    title: 'Soporte y Legal',
     links: [
-      { label: 'Terms & Conditions', href: '/terms-conditions' },
-      { label: 'Privacy Policy', href: '/privacy-policy' },
-      { label: 'Refund Policy', href: '/refund-policy' },
-      { label: 'GDPR Compliance', href: '/gdpr' },
-      { label: 'Affiliate Policy', href: '/affiliate-policy' },
+      { label: 'Preguntas Frecuentes', href: '/faq' },
+      { label: 'Términos y Condiciones', href: '/terms-conditions' },
+      { label: 'Política de Privacidad', href: '/privacy-policy' },
     ],
   },
 ];

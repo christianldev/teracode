@@ -3,39 +3,39 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 const faqData = [
   {
     id: 1,
-    question: 'What is privacy in the digital world?',
+    question: '¿Qué información recopilan en mi sitio web?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'Solo recopilamos la información necesaria para atender consultas, mejorar el sitio y prestar nuestros servicios, como datos de contacto enviados mediante formularios.',
   },
   {
     id: 2,
-    question: 'Why is online privacy important?',
+    question: '¿Cómo protegen los datos de mi negocio?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'Aplicamos buenas prácticas de seguridad y trabajamos con proveedores confiables para proteger la información y los accesos de tu sitio web.',
   },
   {
     id: 3,
-    question: 'How can I protect my privacy online?',
+    question: '¿Comparten mis datos con terceros?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'No vendemos tus datos. Solo compartimos información con servicios necesarios para operar el sitio, como hosting, formularios o analítica, cuando corresponde.',
   },
   {
     id: 4,
-    question: 'Are my messages really private?',
+    question: '¿Los mensajes de mis clientes son privados?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'Sí. Los mensajes se utilizan únicamente para gestionar la consulta o solicitud correspondiente y no se destinan a fines ajenos a tu atención.',
   },
   {
     id: 5,
-    question: 'What data do websites collect about me?',
+    question: '¿Puedo solicitar la eliminación de mis datos?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'Sí. Puedes escribirnos para solicitar acceso, corrección o eliminación de tus datos personales cuando ya no sean necesarios.',
   },
   {
     id: 6,
-    question: 'What is a privacy policy?',
+    question: '¿Dónde puedo leer la política de privacidad?',
     answer:
-      'Your online presence can disclose a wealth of personal information—your habits, whereabouts, and even your identity. Safeguarding your privacy is crucial in thwarting identity theft, avoiding unwanted surveillance, and preventing the misuse of your private information.',
+      'Puedes revisar nuestra política de privacidad en el enlace disponible en el sitio o solicitarla directamente a nuestro equipo.',
   },
 ];
 

@@ -6,21 +6,20 @@ const Testimonial = () => {
     <section className="py-16 sm:py-20 md:py-[75px] lg:py-[100px]">
       <div className="main-container">
         <div className="space-y-[35px] sm:space-y-[50px] md:space-y-[70px]">
-          <div className="text-center space-y-3 sm:space-y-5">
+          <div className="space-y-3 text-center sm:space-y-5">
             <RevealAnimation delay={0.1}>
-              <span className="inline-block badge badge-cyan">What our users say</span>
+              <span className="badge badge-cyan inline-block">Casos de éxito</span>
             </RevealAnimation>
             <div className="space-y-3">
               <RevealAnimation delay={0.2}>
                 <h2>
-                  People&apos;s
-                  <span className="text-primary-500"> share love </span>
+                  Negocios que ya
+                  <span className="text-primary-500"> impulsan sus ventas </span>
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={0.3}>
-                <p className="max-w-[628px] w-full mx-auto">
-                  At the heart of our approach lies a commitment to delivering smart, tailored financial solutions that
-                  align with your unique goals.
+                <p className="mx-auto w-full max-w-[628px]">
+                  Conoce cómo ayudamos a marcas y emprendimientos a digitalizar su catálogo y automatizar sus pedidos.
                 </p>
               </RevealAnimation>
             </div>

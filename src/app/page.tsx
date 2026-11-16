@@ -1,7 +1,7 @@
+import FaqTab from '@/components/faq/FaqTab';
 import Blog from '@/components/home/Blog';
 import Clients from '@/components/home/Clients';
 import Contact from '@/components/home/Contact';
-import CTA from '@/components/home/CTA';
 import Feature from '@/components/home/Feature';
 import FeatureV2 from '@/components/home/FeatureV2';
 import FeatureV3 from '@/components/home/FeatureV3';
@@ -31,7 +31,7 @@ const page = () => {
       <Testimonial />
       <Blog />
       <Contact />
-      <CTA />
+      <FaqTab />
     </main>
 
   );

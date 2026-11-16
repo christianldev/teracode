@@ -3,39 +3,39 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 const faqData = [
   {
     id: 1,
-    question: 'What are terms & conditions?',
+    question: '¿Qué son los términos y condiciones?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'Son las reglas que definen el alcance de nuestros servicios, las responsabilidades de cada parte y las condiciones para trabajar juntos de forma transparente.',
   },
   {
     id: 2,
-    question: 'Why do i need to accept the terms & conditions?',
+    question: '¿Por qué debo aceptar los términos y condiciones?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'Aceptarlos confirma que conoces el proceso, los entregables, los plazos y las políticas aplicables a tu proyecto.',
   },
   {
     id: 3,
-    question: 'Can the terms & conditions change?',
+    question: '¿Pueden cambiar los términos y condiciones?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'Podemos actualizarlos cuando sea necesario. Los cambios importantes se comunicarán de forma clara antes de que afecten a un servicio activo.',
   },
   {
     id: 4,
-    question: 'What happens if I violate the terms & conditions?',
+    question: '¿Qué ocurre si no se cumplen los términos?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'Primero buscaremos una solución conversando contigo. En casos necesarios, podremos pausar el servicio conforme a lo establecido en la propuesta aprobada.',
   },
   {
     id: 5,
-    question: 'Where can I read the full terms & conditions?',
+    question: '¿Dónde puedo leer los términos completos?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'Están disponibles en la página de términos y condiciones del sitio. También puedes solicitarlos a nuestro equipo antes de iniciar un proyecto.',
   },
   {
     id: 6,
-    question: 'What kind of activities are prohibited under your terms?',
+    question: '¿Qué actividades no están permitidas?',
     answer:
-      'Accepting the Terms & Conditions ensures that you understand your rights, responsibilities, and our policies while using our services. It protects both you and our platform.',
+      'No desarrollamos ni alojamos contenido ilegal, engañoso o que infrinja derechos de terceros. Cada proyecto debe cumplir la normativa aplicable.',
   },
 ];
 

@@ -20,8 +20,6 @@ import PeopleAndCultureMenu from './PeopleAndCultureMenu';
 import ResourcesMenu from './ResourcesMenu';
 
 const dropdownNavItems = [
-
-
   { label: 'Collaborate', dataMenu: 'partnership-dropdown-menu', MenuComponent: PartnershipMenu },
   { label: 'Resources', dataMenu: 'resources-mega-menu', MenuComponent: ResourcesMenu },
   { label: 'People & Culture', dataMenu: 'people-dropdown-menu', MenuComponent: PeopleAndCultureMenu },
@@ -49,18 +47,17 @@ const Navbar = () => {
           <div className="relative mx-auto max-w-full">
             <div
               className={cn(
-                'navbar-glow relative mx-auto flex items-center justify-between rounded-full px-2.5 py-2.5 xl:py-0',
-                /* frosted glass — matches `card` from source: backdrop-blur + semi-transparent */
-                'bg-white/25 backdrop-blur-[38px]',
-                'dark:bg-white/10 dark:backdrop-filter dark:backdrop-blur-lg',
-                /* matches `border: 1px solid #ffffff56` */
-                'border border-white/24 dark:border-transparent dark:backdrop-filter dark:backdrop-blur-lg',
-                /* matches `box-shadow: inset 2px 1px 6px #ffffff45` */
-                'shadow-[inset_2px_1px_6px_rgba(255,255,255,0.27),0_8px_32px_rgba(0,0,0,0.08)]',
-                'dark:shadow-none',
-                isScrolled && 'bg-white/25 backdrop-blur-[36px]',
+                'navbar-glow relative mx-auto flex items-center justify-between rounded-full px-4 py-2.5 transition-all duration-300 xl:py-1.5',
+                /* Frosted glass con opacidad suficiente para leer texto oscuro sobre cualquier foto */
+                'bg-white/80 backdrop-blur-xl',
+                'dark:bg-background-8/85 dark:backdrop-blur-xl',
+                /* Borde sutil definido para separar la píldora del fondo blanco derecho */
+                'border border-slate-200/80 dark:border-slate-900/80',
+                /* Sombra suave elevada */
+                'shadow-[0_8px_30px_rgb(0,0,0,0.08)] dark:shadow-[0_8px_30px_rgb(0,0,0,0.4)]',
+                /* Al hacer scroll se vuelve casi sólido para máxima lectura sobre el contenido */
+                isScrolled && 'bg-white/95 shadow-[0_10px_35px_rgb(0,0,0,0.12)] dark:bg-background-7/95',
               )}>
-
               {/* Background layer for overflow clipping without hiding dropdowns */}
               <div className="absolute inset-0 -z-10 overflow-hidden rounded-full">
                 {/* shine streak — matches card::after `shine` keyframe */}
@@ -80,7 +77,7 @@ const Navbar = () => {
               <div className="flex items-center justify-center">
                 <Link href="/" className="inline-flex items-center">
                   <span className="sr-only">Home</span>
-                  <figure className="hidden lg:block lg:max-w-[160px] p-2">
+                  <figure className="hidden p-2 lg:block lg:max-w-[160px]">
                     <Image src={mainLogo} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
                     <Image src={mainLogoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
                   </figure>
@@ -93,15 +90,14 @@ const Navbar = () => {
 
               <nav className="hidden items-center xl:flex">
                 <ul className="flex items-center">
-
                   <li className="relative cursor-pointer py-2.5">
                     <Link
                       href="/about"
                       className={cn(
                         'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'border-transparent text-secondary dark:text-accent/20',
-                        'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
+                        'text-secondary dark:text-accent/40 border-transparent',
+                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
                       )}>
                       <span>Nosotros</span>
                     </Link>
@@ -112,9 +108,9 @@ const Navbar = () => {
                       href="/services"
                       className={cn(
                         'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'border-transparent text-secondary dark:text-accent/20',
-                        'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
+                        'text-secondary dark:text-accent/40 border-transparent',
+                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
                       )}>
                       <span>Servicios</span>
                     </Link>
@@ -130,9 +126,9 @@ const Navbar = () => {
                         className={cn(
                           'text-tagline-1 flex cursor-pointer items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
                           /* glass tint on hover */
-                          'border-transparent text-secondary/60 dark:text-accent/80',
-                          'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                          'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
+                          'text-secondary/60 dark:text-accent/80 border-transparent',
+                          'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+                          'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
                         )}>
                         <span>{label}</span>
                         <span className="block origin-center translate-y-px transition-all duration-300 group-hover/item:rotate-180">
@@ -155,9 +151,9 @@ const Navbar = () => {
                       href="/pricing"
                       className={cn(
                         'text-tagline-1 flex items-center gap-1 rounded-full border px-4 py-2 font-normal transition-all duration-200',
-                        'border-transparent text-secondary/60 dark:text-accent/60',
-                        'hover:border-white/25 hover:bg-white/10 hover:text-secondary hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
-                        'dark:hover:border-white/10 dark:hover:bg-white/[0.07] dark:hover:text-accent',
+                        'text-secondary/60 dark:text-accent/40 border-transparent',
+                        'hover:text-secondary hover:border-white/25 hover:bg-white/10 hover:shadow-[0_2px_12px_rgba(0,0,0,0.08)]',
+                        'dark:hover:text-accent dark:hover:border-white/10 dark:hover:bg-white/[0.07]',
                       )}>
                       <span>Pricing</span>
                     </Link>

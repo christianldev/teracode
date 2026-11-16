@@ -3,39 +3,39 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '..
 export const faqData = [
   {
     id: 1,
-    question: 'What is a changelog?',
+    question: '¿Cómo es el proceso de trabajo?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Primero entendemos tus objetivos, definimos una propuesta y diseñamos la experiencia. Después desarrollamos, probamos y publicamos el sitio contigo.',
   },
   {
     id: 2,
-    question: 'How often is the changelog updated?',
+    question: '¿Qué necesito para empezar?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Solo necesitamos conocer tu idea, los servicios que ofreces y tus objetivos. Si ya tienes logo, fotos o textos, los incorporamos al proyecto.',
   },
   {
     id: 3,
-    question: 'Where can I view the latest changelog?',
+    question: '¿Puedo solicitar cambios durante el diseño?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Sí. Presentamos una propuesta visual antes de desarrollar para que podamos ajustar colores, contenido y estructura según tus comentarios.',
   },
   {
     id: 4,
-    question: 'Am I get notified when something changes?',
+    question: '¿Cómo se publica mi sitio web?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Nos encargamos de configurar el dominio, la publicación y los ajustes finales para que tu sitio quede listo para recibir visitas.',
   },
   {
     id: 5,
-    question: 'What types of updates are included?',
+    question: '¿Recibiré soporte después de publicar?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Sí. Te acompañamos durante el lanzamiento y puedes contratar soporte continuo para actualizaciones, mejoras y nuevos contenidos.',
   },
   {
     id: 6,
-    question: 'Are minor fixes always included in the changelog?',
+    question: '¿Puedo conectar WhatsApp, pagos o formularios?',
     answer:
-      'We diligently update the changelog each time we roll out new features, implement enhancements, or address bugs. This process usually occurs on a biweekly or monthly schedule, ensuring that our users are always informed about the latest improvements and fixes.',
+      'Claro. Integramos WhatsApp, formularios, catálogos, pagos y las herramientas que tu negocio necesite para vender y atender mejor.',
   },
 ];
 

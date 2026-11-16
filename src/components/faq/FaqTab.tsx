@@ -9,16 +9,16 @@ const FaqTab = () => {
       <div className="main-container">
         <div className="space-y-5 text-center">
           <RevealAnimation delay={0.2}>
-            <span className="badge badge-cyan">FAQ</span>
+            <span className="badge badge-cyan">Preguntas frecuentes</span>
           </RevealAnimation>
           <div className="space-y-3 text-center">
             <RevealAnimation delay={0.3}>
-              <h2>Commonly asked questions</h2>
+              <h2>Preguntas frecuentes</h2>
             </RevealAnimation>
             <RevealAnimation delay={0.4}>
               <p className="mx-auto max-w-[600px]">
-                By offering concise and informative responses, this section helps users find solutions without the need
-                to contact customer support, saving time
+                Encuentra respuestas rápidas sobre cómo trabajamos, los tiempos de entrega y cómo podemos ayudar a
+                impulsar tu negocio con un sitio web.
               </p>
             </RevealAnimation>
           </div>

@@ -10,138 +10,97 @@ import RevealAnimation from '../animation/RevealAnimation';
 
 const Contact = () => {
   return (
-    <section className="py-16 md:py-20 lg:py-[90px] xl:py-[100px]" aria-label="Contact Us">
-      <div className="main-container">
-        <div className="flex flex-col lg:flex-row lg:gap-4 gap-8 items-start justify-between">
-          <div className="space-y-9">
-            <div className="space-y-5">
+    <section className="relative overflow-hidden py-16 md:py-20 lg:py-24" aria-label="Contacto">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_75%,rgba(0,103,255,0.14),transparent_34%)]" />
+      <div className="main-container relative">
+        <div className="mx-auto grid max-w-[860px] items-center gap-10 lg:grid-cols-[1.35fr_0.9fr] lg:gap-16">
+          <div className="space-y-7">
+            <div className="space-y-4">
               <RevealAnimation delay={0.1}>
-                <span className="inline-block badge badge-cyan">Contact Us</span>
+                <span className="badge badge-cyan inline-block">Contacto</span>
               </RevealAnimation>
               <div className="space-y-3">
                 <RevealAnimation delay={0.2}>
                   <h2>
-                    Still have
-                    <span className="text-primary-500"> questions? </span>
+                    ¿Listo para impulsar <span className="text-primary-500">tu negocio?</span>
                   </h2>
                 </RevealAnimation>
                 <RevealAnimation delay={0.3}>
-                  <p>Have questions about your financial future? Let’s talk.</p>
+                  <p className="max-w-[440px] text-lg">
+                    Cuéntanos sobre tu proyecto o idea y recibe una propuesta personalizada en menos de 24 horas.
+                  </p>
                 </RevealAnimation>
               </div>
             </div>
-            {/* contact info  */}
-            <ul className="space-y-3 md:space-y-6" aria-label="Contact Information">
-              <RevealAnimation delay={0.4}>
-                <li className="flex items-center gap-2">
-                  <span
-                    className="size-10 bg-white dark:bg-background-8 rounded-full flex items-center justify-center"
-                    aria-hidden="true">
-                    <Image src={mail} alt="Email icon" className="size-6 dark:hidden" />
-                    <Image src={mailWhite} alt="Email icon" className="size-6 hidden dark:block" />
-                  </span>
-                  <p>
-                    <Link href="mailto:hello@TeraCode.com" aria-label="Email us at hello@TeraCode.com">
-                      hello@TeraCode.com
-                    </Link>
-                  </p>
-                </li>
-              </RevealAnimation>
-              <RevealAnimation delay={0.5}>
-                <li className="flex items-center gap-2">
-                  <span
-                    className="size-10 bg-white dark:bg-background-8 rounded-full flex items-center justify-center"
-                    aria-hidden="true">
-                    <Image src={phone} alt="Phone icon" className="size-6 dark:hidden" />
-                    <Image src={phoneWhite} alt="Phone icon" className="size-6 hidden dark:block" />
-                  </span>
-                  <p>
-                    <Link href="tel:2395550108" aria-label="Call us at (239) 555-0108">
-                      (239) 555-0108
-                    </Link>
-                  </p>
-                </li>
-              </RevealAnimation>
-              <RevealAnimation delay={0.6}>
-                <li className="flex items-center gap-2">
-                  <span
-                    className="size-10 bg-white dark:bg-background-8 rounded-full flex items-center justify-center"
-                    aria-hidden="true">
-                    <Image src={location} alt="Location icon" className="size-6 dark:hidden" />
-                    <Image src={locationWhite} alt="Location icon" className="size-6 hidden dark:block" />
-                  </span>
-                  <p>1425 Harmony ave, austin, TX 73301</p>
-                </li>
-              </RevealAnimation>
+
+            <ul className="space-y-3" aria-label="Información de contacto">
+              <ContactItem
+                icon={mail}
+                iconDark={mailWhite}
+                content="hola@teracode.tech"
+                href="mailto:hola@teracode.tech"
+                delay={0.4}
+              />
+              <ContactItem
+                icon={phone}
+                iconDark={phoneWhite}
+                content="+593 99 123 4567"
+                href="tel:+593991234567"
+                delay={0.5}
+              />
+              <ContactItem
+                icon={location}
+                iconDark={locationWhite}
+                content="Guayaquil, Ecuador • Atención a todo el país"
+                delay={0.6}
+              />
             </ul>
+
+            <RevealAnimation delay={0.7}>
+              <Link
+                href="https://wa.me/593991234567"
+                className="btn btn-primary hover:btn-secondary btn-md"
+                aria-label="Escribir directo por WhatsApp">
+                <Image src={phoneWhite} alt="" className="size-4" /> Escribir directo por WhatsApp
+              </Link>
+            </RevealAnimation>
           </div>
-          {/* contact form  */}
-          <RevealAnimation delay={0.7}>
-            <div className="p-7 lg:p-[42px] bg-white dark:bg-background-8 rounded-[20px] lg:max-w-[560px] lp:max-w-[605px] w-full">
-              <form action="/" method="post">
-                {/* name field  */}
-                <fieldset className="w-full flex flex-col gap-2 items-start justify-start mb-8">
-                  <label htmlFor="fullName" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    name="fullName"
-                    id="fullName"
-                    placeholder="Enter your name"
-                    className="rounded-full placeholder:text-tagline-1 border border-stroke-3 w-full px-[18px] py-3 focus-visible:outline focus-visible:outline-primary-500 dark:border-stroke-7 dark:placeholder:text-accent/60 dark:text-accent placeholder:text-secondary/60 text-secondary placeholder:font-normal font-normal"
-                    aria-required="true"
-                  />
-                </fieldset>
-                {/* email field  */}
-                <fieldset className="w-full flex flex-col gap-2 items-start justify-start mb-8">
-                  <label htmlFor="emailAddress" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                    Email address
-                  </label>
-                  <input
-                    type="email"
-                    name="emailAddress"
-                    id="emailAddress"
-                    placeholder="Enter your email"
-                    className="rounded-full placeholder:text-tagline-1 border border-stroke-3 w-full px-[18px] py-3 focus-visible:outline focus-visible:outline-primary-500 dark:border-stroke-7 dark:placeholder:text-accent/60 dark:text-accent placeholder:text-secondary/60 text-secondary placeholder:font-normal font-normal"
-                    aria-required="true"
-                  />
-                </fieldset>
-                {/* message field  */}
-                <fieldset className="w-full flex flex-col gap-2 items-start justify-start mb-4">
-                  <label htmlFor="messages" className="text-tagline-1 text-secondary dark:text-accent font-medium">
-                    Message
+
+          <RevealAnimation delay={0.4} offset={80} direction="left">
+            <div className="rounded-[20px] border border-slate-300 bg-white p-6 shadow-xl sm:p-7 dark:border-[#3e5a7c] dark:bg-[#1d2d44]">
+              <form action="/" method="post" className="space-y-4">
+                <FormField label="Nombre o Negocio" id="name" placeholder="Ingresa tu nombre o el de tu marca" />
+                <FormField label="Celular / WhatsApp" id="phone" type="tel" placeholder="Ej: 099 123 4567" />
+                <div className="space-y-2">
+                  <label htmlFor="project" className="text-secondary dark:text-accent text-sm font-medium">
+                    ¿Qué proyecto tienes en mente?
                   </label>
                   <textarea
-                    name="messages"
-                    id="messages"
-                    placeholder="Enter your message"
-                    className="rounded-xl placeholder:text-tagline-1 border border-stroke-3 w-full px-[18px] py-3 min-h-[120px] resize-none focus-visible:outline focus-visible:outline-primary-500 dark:border-stroke-7 dark:placeholder:text-accent/60 dark:text-accent placeholder:text-secondary/60 text-secondary placeholder:font-normal font-normal"
-                    aria-required="true"
-                    defaultValue={''}
+                    id="project"
+                    name="project"
+                    placeholder="Cuéntanos brevemente qué necesitas para tu negocio..."
+                    className="text-secondary placeholder:text-secondary/60 focus-visible:outline-primary-500 dark:text-accent dark:placeholder:text-accent/60 min-h-[92px] w-full resize-none rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm focus-visible:outline dark:border-[#425779] dark:bg-[#142238]"
                   />
-                </fieldset>
-                {/* terms and conditions checkbox */}
-                <fieldset className="flex items-center gap-2 mb-4">
-                  <label htmlFor="agree-terms" className="flex items-center gap-x-3">
-                    <input id="agree-terms" type="checkbox" className="sr-only peer" />
-                    <span className="size-4 rounded-full border border-stroke-3 dark:border-stroke-7 relative after:absolute after:size-2.5 after:bg-primary-500 after:rounded-full after:top-1/2 after:left-1/2 after:-translate-x-1/2 after:-translate-y-1/2 after:opacity-0 peer-checked:after:opacity-100 peer-checked:border-primary-500 cursor-pointer" />
-                  </label>
-                  <label
-                    htmlFor="agree-terms"
-                    className="text-tagline-3 cursor-pointer text-secondary/60 dark:text-accent/60">
-                    I agree with the
-                    <Link href="/terms-conditions" className="text-primary-500 underline text-tagline-3">
-                      terms and conditions
-                    </Link>
-                  </label>
-                </fieldset>
-                {/* submit button */}
+                </div>
+                <label
+                  htmlFor="privacy"
+                  className="text-secondary/75 dark:text-accent/80 flex cursor-pointer items-center gap-2 text-xs">
+                  <input
+                    id="privacy"
+                    type="checkbox"
+                    className="accent-primary-500 size-4 rounded border-slate-400"
+                    required
+                  />
+                  Acepto las{' '}
+                  <Link href="/privacy-policy" className="underline">
+                    políticas de privacidad
+                  </Link>
+                </label>
                 <button
                   type="submit"
-                  className="btn btn-secondary dark:btn-accent btn-md w-full before:content-none first-letter:uppercase hover:btn-primary"
-                  aria-label="Submit contact form">
-                  Submit
+                  className="btn btn-primary hover:btn-secondary btn-md w-full"
+                  aria-label="Enviar solicitud gratis">
+                  Enviar solicitud gratis →
                 </button>
               </form>
             </div>
@@ -151,5 +110,50 @@ const Contact = () => {
     </section>
   );
 };
+
+type ContactItemProps = {
+  icon: typeof mail;
+  iconDark: typeof mailWhite;
+  content: string;
+  href?: string;
+  delay: number;
+};
+
+const ContactItem = ({ icon, iconDark, content, href, delay }: ContactItemProps) => (
+  <RevealAnimation delay={delay}>
+    <li className="flex items-center gap-3">
+      <span
+        className="flex size-9 shrink-0 items-center justify-center rounded-full bg-white dark:bg-[#1d2d44]"
+        aria-hidden="true">
+        <Image src={icon} alt="" className="size-5 dark:hidden" />
+        <Image src={iconDark} alt="" className="hidden size-5 dark:block" />
+      </span>
+      {href ? <Link href={href}>{content}</Link> : <p>{content}</p>}
+    </li>
+  </RevealAnimation>
+);
+
+type FormFieldProps = {
+  label: string;
+  id: string;
+  placeholder: string;
+  type?: 'text' | 'tel';
+};
+
+const FormField = ({ label, id, placeholder, type = 'text' }: FormFieldProps) => (
+  <div className="space-y-2">
+    <label htmlFor={id} className="text-secondary dark:text-accent text-sm font-medium">
+      {label}
+    </label>
+    <input
+      id={id}
+      name={id}
+      type={type}
+      placeholder={placeholder}
+      className="text-secondary placeholder:text-secondary/60 focus-visible:outline-primary-500 dark:text-accent dark:placeholder:text-accent/60 w-full rounded-lg border border-slate-300 bg-white px-3 py-2.5 text-sm focus-visible:outline dark:border-[#425779] dark:bg-[#142238]"
+      required
+    />
+  </div>
+);
 
 export default Contact;

@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image from 'next/image';
@@ -42,7 +42,7 @@ const Hero = () => {
             thumbs={{ swiper: thumbsSwiper }}
             modules={[FreeMode, Navigation, Thumbs, EffectFade, Autoplay]}
             autoplay={{
-              delay: 3500,
+              delay: 5000,
               disableOnInteraction: false,
             }}
             className="mySwiper swiper-hero swiper-fade h-full w-full"
