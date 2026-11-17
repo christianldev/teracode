@@ -17,12 +17,13 @@ const CaseStudyPage = () => {
       <Success />
       <Feature />
       <CTA
-        className="dark:bg-background-5 bg-white"
-        badgeClass="!badge-yellow-v2"
-        badgeText="Get started"
-        ctaHeading="Build a complete website using the assistance"
-        description="Start your free trial today and see your ideas come to life easily and creatively."
-        ctaBtnText="Get started"
+       className="dark:bg-background-5 bg-white"
+        badgeText="Empieza hoy"
+        badgeClass="!badge-cyan-v2"
+        ctaHeading="Lleva tu negocio al"
+        spanText="siguiente nivel digital"
+        description="Déjanos tu WhatsApp o correo y recibe una asesoría gratuita con propuesta a medida en menos de 24 horas."
+        ctaBtnText="Solicitar asesoría"
         btnClass="hover:btn-secondary dark:hover:btn-accent"
       />
     </main>

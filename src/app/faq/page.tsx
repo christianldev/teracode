@@ -6,7 +6,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'FAQ - Investment Management || TeraCode',
+  title: 'Preguntas Frecuentes | TeraCode Ecuador',
+  description:
+    'Resuelve tus dudas sobre tiempos de entrega, formas de pago, dominio, hosting y desarrollo de páginas web o tiendas online en Ecuador.',
 };
 
 const FAQ = () => {
@@ -17,11 +19,12 @@ const FAQ = () => {
       <CTA
         className="dark:bg-background-6 bg-white"
         badgeClass="!badge-cyan"
-        badgeText="Get Started"
-        ctaHeading="Ready to start earning with TeraCode?"
-        description="If you have any questions, feel free to reach out to our team."
+        badgeText="Empieza hoy"
+        ctaHeading="Lleva tu negocio al"
+        spanText="siguiente nivel digital"
+        description="Si tienes alguna consulta adicional, escríbenos por WhatsApp o correo y te asesoramos sin compromiso."
         btnClass="hover:btn-secondary dark:hover:btn-accent"
-        ctaBtnText="Get started"
+        ctaBtnText="Solicitar asesoría"
       />
     </main>
   );

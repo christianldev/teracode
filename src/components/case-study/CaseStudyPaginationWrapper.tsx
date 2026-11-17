@@ -1,6 +1,5 @@
 'use client';
 
-import { ICaseStudy } from '@/interface';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -8,11 +7,21 @@ import RevealAnimation from '../animation/RevealAnimation';
 import Pagination from '../shared/Pagination';
 import LinkButton from '../ui/button/LinkButton';
 
-const CaseStudyPaginationWrapper = ({ caseStudies }: { caseStudies: ICaseStudy[] }) => {
+export interface TeraCodeProject {
+  slug: string;
+  title: string;
+  description: string;
+  result: string;
+  thumbnail: string;
+  href: string;
+  ctaLabel: string;
+  isExternal?: boolean;
+}
+
+const CaseStudyPaginationWrapper = ({ caseStudies }: { caseStudies: TeraCodeProject[] }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const caseStudiesPerPage = 3;
 
-  // Calculate pagination
   const totalPages = Math.ceil(caseStudies.length / caseStudiesPerPage);
   const startIndex = (currentPage - 1) * caseStudiesPerPage;
   const endIndex = startIndex + caseStudiesPerPage;
@@ -24,53 +33,82 @@ const CaseStudyPaginationWrapper = ({ caseStudies }: { caseStudies: ICaseStudy[]
 
   return (
     <>
-      {/* Case Study Cards */}
-      <div className="grid grid-cols-12 items-start justify-center gap-8">
+      {/* Grilla simétrica de 3 columnas (corregida) */}
+      <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
         {currentCaseStudies?.map((caseStudy, index) => (
-          <RevealAnimation delay={0.2 + index * 0.1} key={caseStudy.slug}>
+          <RevealAnimation
+            delay={0.2 + index * 0.1}
+            key={caseStudy.slug}
+            className="flex h-full w-full"
+          >
             <article
-              className="group col-span-12 max-w-[409px] md:col-span-6 lg:col-span-4"
+              className="group flex h-full w-full flex-col"
               itemScope
-              itemType="http://schema.org/Article">
-              <div className="bg-background-1 dark:bg-background-6 scale-100 rounded-[20px] transition-transform duration-500 hover:scale-[102%] hover:transition-transform hover:duration-500">
-                <figure className="h-[260px] max-w-[409px] overflow-hidden rounded-t-[20px]">
-                  <Link href={`/case-study/${caseStudy.slug}`}>
-                    <Image
-                      src={caseStudy.thumbnail}
-                      alt="Case study thumbnail"
-                      width={409}
-                      height={260}
-                      className="size-full object-cover"
-                    />
-                  </Link>
-                </figure>
-                {/* content  */}
-                <div className="space-y-6 p-6">
-                  <div className="space-y-2">
-                    <Link href={`/case-study/${caseStudy.slug}`}>
-                      <h3 className="text-heading-5 line-clamp-2" itemProp="headline">
-                        {caseStudy.title}
-                      </h3>
-                      <div className="space-y-2">
-                        <p itemProp="description" className="line-clamp-2">
-                          {caseStudy.description}
-                        </p>
-                        <p>
-                          <span className="text-secondary dark:text-accent font-medium">Results: </span>
-                          {caseStudy.result}
-                        </p>
-                      </div>
+              itemType="http://schema.org/Article"
+            >
+              <div className="bg-background-1 dark:bg-background-6 flex h-full w-full flex-col overflow-hidden rounded-[20px] border border-gray-200/70 transition-transform duration-500 hover:scale-[102%] dark:border-gray-800">
+                <figure className="h-[240px] w-full overflow-hidden">
+                  {caseStudy.isExternal ? (
+                    <a href={caseStudy.href} target="_blank" rel="noopener noreferrer">
+                      <Image
+                        src={caseStudy.thumbnail}
+                        alt={caseStudy.title}
+                        width={409}
+                        height={260}
+                        className="size-full object-cover"
+                      />
+                    </a>
+                  ) : (
+                    <Link href={caseStudy.href}>
+                      <Image
+                        src={caseStudy.thumbnail}
+                        alt={caseStudy.title}
+                        width={409}
+                        height={260}
+                        className="size-full object-cover"
+                      />
                     </Link>
+                  )}
+                </figure>
+
+                {/* Contenido */}
+                <div className="flex flex-1 flex-col justify-between space-y-6 p-6">
+                  <div className="space-y-3">
+                    <h3 className="text-heading-5 line-clamp-2" itemProp="headline">
+                      {caseStudy.title}
+                    </h3>
+                    <p itemProp="description" className="text-sm leading-relaxed">
+                      {caseStudy.description}
+                    </p>
+                    <p className="text-sm">
+                      <span className="text-secondary dark:text-accent font-semibold">
+                        Resultado:{' '}
+                      </span>
+                      {caseStudy.result}
+                    </p>
                   </div>
-                  {/* btn  */}
-                  <div>
-                    <LinkButton
-                      href={`/case-study/${caseStudy.slug}`}
-                      className="btn btn-md btn-white dark:btn-transparent hover:btn-primary"
-                      aria-label={`Read more about ${caseStudy.title} case study`}
-                      itemProp="url">
-                      Read more
-                    </LinkButton>
+
+                  {/* Botón */}
+                  <div className="pt-2">
+                    {caseStudy.isExternal ? (
+                      <a
+                        href={caseStudy.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-md btn-white dark:btn-transparent hover:!bg-[#1E62F5] hover:!text-white inline-block"
+                      >
+                        {caseStudy.ctaLabel} →
+                      </a>
+                    ) : (
+                      <LinkButton
+                        href={caseStudy.href}
+                        className="btn btn-md btn-white dark:btn-transparent hover:btn-primary"
+                        aria-label={`Ver detalles de ${caseStudy.title}`}
+                        itemProp="url"
+                      >
+                        {caseStudy.ctaLabel}
+                      </LinkButton>
+                    )}
                   </div>
                 </div>
               </div>
@@ -79,7 +117,7 @@ const CaseStudyPaginationWrapper = ({ caseStudies }: { caseStudies: ICaseStudy[]
         ))}
       </div>
 
-      {/* Pagination */}
+      {/* Paginación (solo aparece si agregas más de 3 proyectos en el futuro) */}
       {totalPages > 1 && (
         <div className="mt-14">
           <RevealAnimation delay={0.5}>

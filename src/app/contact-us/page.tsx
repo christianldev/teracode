@@ -6,7 +6,9 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Contact Us - Investment Management || TeraCode',
+  title: 'Contacto y Cotizaciones | TeraCode Ecuador',
+  description:
+    'Escríbenos por WhatsApp o correo para cotizar tu página web, catálogo digital o tienda online en Guayaquil y todo el Ecuador.',
 };
 
 const ContactUs = () => {
@@ -17,10 +19,11 @@ const ContactUs = () => {
       <CTA
         className="dark:bg-background-5 bg-white"
         badgeClass="badge-yellow-v2"
-        badgeText="Get started"
-        ctaBtnText="Contact us"
-        ctaHeading="Get in touch"
-        description="We're here to help you with your inquiries and needs. Feel free to reach out to us using the contact form below, and we'll get back to you as soon as possible."
+        badgeText="Atención inmediata"
+        ctaHeading="¿Prefieres hablar"
+        spanText="directo por WhatsApp?"
+        description="Cuéntanos qué necesita tu negocio y recibe una propuesta clara con tiempos y precios en menos de 24 horas."
+        ctaBtnText="Escribir por WhatsApp"
       />
     </main>
   );
