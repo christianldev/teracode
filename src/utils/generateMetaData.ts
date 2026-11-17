@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 
-export const DEFAULT_URL = 'https://next-saas-next.vercel.app/';
-export const DEFAULT_TITLE = 'TeraCode - Software, SaaS & Startup Tailwind Template';
+export const DEFAULT_URL = 'https://teracode-six.vercel.app/'; // Actualiza a https://teracode.tech cuando conectes tu dominio propio
+export const DEFAULT_TITLE = 'TeraCode | Desarrollo Web, Catálogos y Tiendas Online en Ecuador';
 export const DEFAULT_DESCRIPTION =
-  'TeraCode - the ultimate collection of 38+ premium HTML templates for SaaS businesses and startups. Built with Tailwind CSS, featuring responsive design, authentication flows, pricing pages, and modern UI components. Perfect for web applications and digital products.';
-export const DEFAULT_IMAGE_URL = 'https://images.prismic.io/staticmania/aPD-K55xUNkB2D2X_og-image.jpg';
+  'Diseñamos y desarrollamos páginas web modernas, catálogos interactivos con pedidos a WhatsApp y tiendas online para negocios y pymes en Guayaquil y todo el Ecuador.';
+export const DEFAULT_IMAGE_URL = '/images/og-teracode.png'; // Guarda aquí tu banner de 1200x630 px
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
@@ -12,11 +12,19 @@ const defaultMetadata: Metadata = {
   description: DEFAULT_DESCRIPTION,
   openGraph: {
     type: 'website',
+    locale: 'es_EC',
     siteName: 'TeraCode',
     url: DEFAULT_URL,
     title: DEFAULT_TITLE,
     description: DEFAULT_DESCRIPTION,
-    images: [{ url: DEFAULT_IMAGE_URL, width: 1200, height: 630 }],
+    images: [
+      {
+        url: DEFAULT_IMAGE_URL,
+        width: 1200,
+        height: 630,
+        alt: 'TeraCode - Desarrollo Web y Tiendas Online en Ecuador',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
@@ -26,7 +34,12 @@ const defaultMetadata: Metadata = {
   },
 };
 
-const generateMetadata = (title?: string, description?: string, canonicaUrl?: string, imageUrl?: string): Metadata => {
+const generateMetadata = (
+  title?: string,
+  description?: string,
+  canonicaUrl?: string,
+  imageUrl?: string,
+): Metadata => {
   return {
     ...defaultMetadata,
     title: title ?? defaultMetadata.title,
@@ -39,7 +52,9 @@ const generateMetadata = (title?: string, description?: string, canonicaUrl?: st
       title: title ?? defaultMetadata.openGraph?.title,
       description: description ?? defaultMetadata.openGraph?.description,
       url: canonicaUrl ?? defaultMetadata.openGraph?.url,
-      images: imageUrl ? [{ url: imageUrl, width: 1200, height: 630 }] : defaultMetadata.openGraph?.images,
+      images: imageUrl
+        ? [{ url: imageUrl, width: 1200, height: 630 }]
+        : defaultMetadata.openGraph?.images,
     },
     twitter: {
       ...defaultMetadata.twitter,
