@@ -4,12 +4,16 @@ export const DEFAULT_URL = 'https://teracode-six.vercel.app/'; // Actualiza a ht
 export const DEFAULT_TITLE = 'TeraCode | Desarrollo Web, Catálogos y Tiendas Online en Ecuador';
 export const DEFAULT_DESCRIPTION =
   'Diseñamos y desarrollamos páginas web modernas, catálogos interactivos con pedidos a WhatsApp y tiendas online para negocios y pymes en Guayaquil y todo el Ecuador.';
-export const DEFAULT_IMAGE_URL = '/images/og-teracode.png'; // Guarda aquí tu banner de 1200x630 px
+export const DEFAULT_IMAGE_URL = '/images/og-teracode.jpeg'; // Guarda aquí tu banner de 1200x630 px
 
 const defaultMetadata: Metadata = {
   metadataBase: new URL(DEFAULT_URL),
   title: DEFAULT_TITLE,
   description: DEFAULT_DESCRIPTION,
+  icons: {
+    icon: [{ url: '/images/favicon.ico', type: 'image/x-icon' }],
+    shortcut: ['/images/favicon.ico'],
+  },
   openGraph: {
     type: 'website',
     locale: 'es_EC',
