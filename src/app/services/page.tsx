@@ -16,16 +16,15 @@ const page = () => {
     <main className="bg-background-1 dark:bg-background-6">
       <Services />
       <Features />
-      <Solutions />
       <Pricing />
       <CTA
         className="dark:bg-background-6 bg-white"
         badgeClass="hidden"
-        ctaHeading="Build a complete website using the"
-        spanText="assistance"
-        description="Start your free trial today and see your ideas come to life easily and creatively."
+        ctaHeading="Lleva tu negocio al"
+        spanText="siguiente nivel digital"
+        description="Déjanos tu WhatsApp o correo y recibe una asesoría gratuita con propuesta a medida en menos de 24 horas."
         btnClass="hover:btn-secondary dark:hover:btn-accent"
-        ctaBtnText="Get started"
+        ctaBtnText="Solicitar asesoría"
       />
     </main>
   );

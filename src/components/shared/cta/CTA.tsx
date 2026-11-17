@@ -22,11 +22,11 @@ interface CTAProps {
 const CTA = ({
   className,
   badgeClass,
-  ctaHeading,
-  spanText,
-  description,
+  ctaHeading = 'Lleva tu negocio al',
+  spanText = 'siguiente nivel digital',
+  description = 'Déjanos tu WhatsApp o correo y recibe una asesoría gratuita con una propuesta a medida para tu proyecto en menos de 24 horas.',
   btnClass,
-  ctaBtnText,
+  ctaBtnText = 'Solicitar asesoría',
   badgeText,
   descriptionClass,
   headingClass,
@@ -35,9 +35,12 @@ const CTA = ({
   checkListVariant = 'default',
 }: CTAProps) => {
   return (
-    <section className={cn('py-[50px] md:py-20 lg:py-28', className)} aria-label="cta section">
+    <section
+      className={cn('py-[50px] md:py-20 lg:py-28', className)}
+      aria-label="Sección de llamada a la acción"
+    >
       <div className="main-container">
-        <div className="xl :gap-0 flex flex-col items-center justify-between gap-8 xl:flex-row">
+        <div className="flex flex-col items-center justify-between gap-8 xl:flex-row xl:gap-0">
           <div className="mx-3 max-w-[649px] space-y-3 text-center sm:mx-0 md:w-full xl:text-left">
             {badgeText && (
               <RevealAnimation delay={0.3}>
@@ -49,7 +52,7 @@ const CTA = ({
               <RevealAnimation delay={badgeText ? 0.4 : 0.3}>
                 <h2 className={cn('md:text-heading-2 text-heading-5', headingClass)} aria-label="cta-heading">
                   {ctaHeading}
-                  {spanText && <span className="text-primary-500"> {spanText}</span>}
+                  {spanText && <span className="text-[#1E62F5]"> {spanText}</span>}
                 </h2>
               </RevealAnimation>
               <RevealAnimation delay={badgeText ? 0.5 : 0.4}>
@@ -59,23 +62,29 @@ const CTA = ({
               </RevealAnimation>
             </div>
           </div>
-          {/* newsletter form  */}
+
+          {/* Formulario de contacto rápido */}
           <div
             className={cn(
               'w-full max-w-[562px] space-y-6 lg:pl-9 xl:pl-[96px]',
               badgeText && 'mt-[40px] space-y-6 lg:mt-[67px]',
-            )}>
-            <CtaInputForm btnClass={btnClass} ctaBtnText={ctaBtnText} inputFieldClass={inputFieldClass} />
+            )}
+          >
+            <CtaInputForm
+              btnClass={cn('!bg-[#1E62F5] hover:!bg-blue-700 !text-white', btnClass)}
+              ctaBtnText={ctaBtnText}
+              inputFieldClass={inputFieldClass}
+            />
             <CTACheckList
               className="gap-x-4 gap-y-5 sm:gap-x-6 sm:gap-y-0 xl:justify-start"
               ctaCheckListData={[
                 {
                   id: '1',
-                  text: 'No credit card required',
+                  text: 'Cotización 100% gratis',
                 },
                 {
                   id: '2',
-                  text: '14-Day free trial',
+                  text: 'Respuesta en menos de 24h',
                 },
               ]}
               listTextClass={listTextClass}
@@ -87,5 +96,6 @@ const CTA = ({
     </section>
   );
 };
+
 CTA.displayName = 'CTA';
 export default CTA;
