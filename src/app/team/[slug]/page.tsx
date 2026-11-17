@@ -6,7 +6,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Team Details - Investment Management || TeraCode',
+  title: 'Team Details - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

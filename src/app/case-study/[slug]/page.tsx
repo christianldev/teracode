@@ -13,7 +13,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Case Study Details - Investment Management || TeraCode',
+  title: 'Case Study Details - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 interface CaseStudyDetailsPageProps {

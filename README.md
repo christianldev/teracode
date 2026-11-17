@@ -1,6 +1,6 @@
-# Investment Management - Next.js SaaS Template
+# TeraCode || Desarrollo web a la medida - Next.js SaaS Template
 
-A modern, production-ready Next.js 16 SaaS template built for Investment Management platforms and SaaS businesses. Features a complete set of pages, components, and functionality with React 19, TypeScript, Tailwind CSS 4, and cutting-edge web technologies. Perfect for building smart, fast, and reliable investment management solutions.
+A modern, production-ready Next.js 16 SaaS template built for TeraCode || Desarrollo web a la medida platforms and SaaS businesses. Features a complete set of pages, components, and functionality with React 19, TypeScript, Tailwind CSS 4, and cutting-edge web technologies. Perfect for building smart, fast, and reliable TeraCode || Desarrollo web a la medida solutions.
 
 ![Next.js](https://img.shields.io/badge/Next.js-16.0.0-black)
 ![React](https://img.shields.io/badge/React-19.2.0-blue)
@@ -12,7 +12,7 @@ A modern, production-ready Next.js 16 SaaS template built for Investment Managem
 ## 📦 What's Included
 
 - ✅ **Complete Source Code** - Full Next.js 16 project with App Router
-- ✅ **48 Pages** - Comprehensive page collection for Investment Management and SaaS businesses
+- ✅ **48 Pages** - Comprehensive page collection for TeraCode || Desarrollo web a la medida and SaaS businesses
 - ✅ **222 Components** - Reusable React components with TypeScript
 - ✅ **Markdown Support** - Blog posts, whitepapers, case studies, services, and more
 - ✅ **Responsive Design** - Mobile-first approach
@@ -335,7 +335,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'New Page - TeraCode Investment Management',
+  title: 'New Page - TeraCode TeraCode || Desarrollo web a la medida',
   description: 'Description of the new page',
 };
 

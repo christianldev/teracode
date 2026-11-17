@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Refund Policy - Investment Management || TeraCode',
+  title: 'Refund Policy - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const RefundPolicy = () => {

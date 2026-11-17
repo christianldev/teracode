@@ -5,8 +5,6 @@ import { MobileMenuProvider } from '@/context/MobileMenuContext';
 import { mobileMenuData } from '@/data/navbar-data';
 import { useNavbarScroll } from '@/hooks/useScrollHeader';
 import { cn } from '@/utils/cn';
-import logoDark from '@public/images/shared/logo-dark.svg';
-import logoIcon from '@public/images/shared/logo.svg';
 import mainLogo from '@public/images/shared/main-logo.svg';
 import mainLogoDark from '@public/images/shared/main-logo-dark.svg';
 import Image from 'next/image';
@@ -72,9 +70,9 @@ const Navbar = () => {
                     <Image src={mainLogo} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
                     <Image src={mainLogoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
                   </figure>
-                  <figure className="block max-w-[44px] lg:hidden">
-                    <Image src={logoIcon} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
-                    <Image src={logoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
+                  <figure className="block w-[118px] sm:w-[132px] lg:hidden">
+                    <Image src={mainLogo} alt="TeraCode" className="block h-auto w-full dark:hidden" priority />
+                    <Image src={mainLogoDark} alt="TeraCode" className="hidden h-auto w-full dark:block" priority />
                   </figure>
                 </Link>
               </div>

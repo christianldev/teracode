@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: '404 - Investment Management || TeraCode',
+  title: '404 - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = () => {

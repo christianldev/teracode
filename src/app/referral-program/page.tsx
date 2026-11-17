@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Referral Program - Investment Management || TeraCode',
+  title: 'Referral Program - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = () => {

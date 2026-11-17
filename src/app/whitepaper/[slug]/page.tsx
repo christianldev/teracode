@@ -12,7 +12,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Whitepaper Details - Investment Management || TeraCode',
+  title: 'Whitepaper Details - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = async ({ params }: { params: Promise<{ slug: string }> }) => {

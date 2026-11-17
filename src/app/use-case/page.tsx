@@ -6,7 +6,7 @@ import FinanceAndOperation from '../../components/use-case/FinanceAndOperation';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Use Case - Investment Management || TeraCode',
+  title: 'Use Case - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = () => {

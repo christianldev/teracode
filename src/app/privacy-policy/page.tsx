@@ -5,7 +5,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Privacy Policy - Investment Management || TeraCode',
+  title: 'Privacy Policy - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = () => {

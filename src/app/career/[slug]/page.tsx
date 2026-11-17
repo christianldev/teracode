@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Apply Now - Investment Management || TeraCode',
+  title: 'Apply Now - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const CareerDetails = async ({ params }: { params: Promise<{ slug: string }> }) => {

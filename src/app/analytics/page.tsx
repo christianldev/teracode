@@ -7,7 +7,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   ...defaultMetadata,
-  title: 'Analytics - Investment Management || TeraCode',
+  title: 'Analytics - TeraCode || Desarrollo web a la medida || TeraCode',
 };
 
 const page = () => {
